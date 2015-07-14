@@ -1,0 +1,23 @@
+{
+  "name": "curated_care",
+  "version": "0.0.0",
+  "authors": [
+    "Michael Haggerty <mhaggerty@trellon.com>"
+  ],
+  "description": "Curated Care theme",
+  "license": "GPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Sassy-Buttons": "jhardy/Sassy-Buttons",
+    "compass-mixins": "Igosuki/compass-mixins#~1.0.2",
+    "compass-breakpoint": "at-import/breakpoint#~2.6.1",
+    "zen-grids": "JohnAlbin/zen-grids#~2.0.0-beta.3"
+  }
+}

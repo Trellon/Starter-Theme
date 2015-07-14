@@ -1,0 +1,40 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+/* HTML element (SMACSS base) rules */
+/*
+ * Copy _normalize.scss and make a distinct normalize file for your project. i.e. _normalize-someproject.scss.
+ * This is where you will assign specific styles for common markup, fonts and other base styles.
+ */
+@import "normalize";
+
+/* Layout rules */
+/*
+ * Create distinct mixins for handing layouts within your themes.
+ * A layout should provide styles that control the placement of elements.
+ * A layout can also include media queries that transform the way information displays at different resolutions.
+ */
+@import "layouts/responsive";
+
+/* Component (SMACSS module) rules */
+/*
+ * Create distinct mixins for individual page elements. Group them into component files based on common styles in the theme.
+ * DO NOT add your components to components/misc, it's not a good way to organize your code.
+ */
+@import "components/misc";
+
+@import "print";
+
+/* SMACSS theme rules */
+/*
+ * All layouts and components should be applied within the theme file. There should be no styles in component / layout files, just mixins.
+ */
+/* @import "themes/sometheme"; */
