@@ -3,8 +3,8 @@ This is a zen subtheme used for specific modules.
 
 # Requirements
 
-* Grunt
-* Bower
+* Grunt - http://gruntjs.com/getting-started#installing-the-cli
+* Bower - http://bower.io/#install-bower
 * Drupal
 
 # Instructions for Getting Started
