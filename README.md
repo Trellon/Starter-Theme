@@ -19,8 +19,8 @@ There are a number of ways to get started with this theme.
 
 ## Quickstart
 
-> bower install
-> npm install --save-dev
+    bower install
+    npm install --save-dev
 
 
 
