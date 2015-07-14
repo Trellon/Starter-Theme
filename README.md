@@ -25,6 +25,7 @@ You have to set up your theme in order to get started.
 
     bower install
     npm install --save-dev
+    grunt --force
 
 # Included components
 
