@@ -6,6 +6,17 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+/**
+ * @file
+ * Functions
+ *
+ * Functions needed in SASS for operations.
+ */
+/**
+ * compact
+ * 
+ * Replaces the compact function from compass. This is missing in compass-mixins.
+ */
 /* HTML element (SMACSS base) rules */
 /*
  * Copy _normalize.scss and make a distinct normalize file for your project. i.e. _normalize-someproject.scss.
@@ -1007,11 +1018,11 @@ table {
 /* line 265, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/components/_misc.scss */
 .tabs-primary, .tabs-secondary {
   overflow: hidden;
-  background-image: -owg(compact(linear-gradient(bottom, #bbb 1px, transparent 1px), false, false, false, false, false, false, false, false, false));
-  background-image: -webkit(compact(linear-gradient(bottom, #bbb 1px, transparent 1px), false, false, false, false, false, false, false, false, false));
-  background-image: -moz(compact(linear-gradient(bottom, #bbb 1px, transparent 1px), false, false, false, false, false, false, false, false, false));
-  background-image: -o(compact(linear-gradient(bottom, #bbb 1px, transparent 1px), false, false, false, false, false, false, false, false, false));
-  background-image: compact(linear-gradient(bottom, #bbb 1px, transparent 1px), false, false, false, false, false, false, false, false, false);
+  background-image: -owg(linear-gradient(bottom, #bbb 1px, transparent 1px));
+  background-image: -webkit(linear-gradient(bottom, #bbb 1px, transparent 1px));
+  background-image: -moz(linear-gradient(bottom, #bbb 1px, transparent 1px));
+  background-image: -o(linear-gradient(bottom, #bbb 1px, transparent 1px));
+  background-image: linear-gradient(bottom, #bbb 1px, transparent 1px);
   /* IE 9 and earlier don't understand gradients. */
   list-style: none;
   border-bottom: 1px solid #bbb \0/ie;
@@ -1043,7 +1054,7 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  text-shadow: compact(compact(1px 1px 0 false #fff), false, false, false, false, false, false, false, false, false);
+  text-shadow: 1px 1px 0 false #fff;
   border: 1px solid #bbb;
   border-bottom-color: transparent;
   /* IE 9 and earlier don't understand gradients. */
@@ -1061,10 +1072,10 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  -webkit-transition: compact(compact(background-color 0.3s, false, false, false, false, false, false, false, false, false) false false);
-  -moz-transition: compact(compact(background-color 0.3s, false, false, false, false, false, false, false, false, false) false false false);
-  -o-transition: compact(compact(background-color 0.3s, false, false, false, false, false, false, false, false, false) false false false);
-  transition: compact(background-color 0.3s, false, false, false, false, false, false, false, false, false);
+  -webkit-transition: background-color 0.3s false;
+  -moz-transition: background-color 0.3s false false;
+  -o-transition: background-color 0.3s false false;
+  transition: background-color 0.3s;
   color: #333;
   background-color: #dedede;
   letter-spacing: 1px;
@@ -1081,11 +1092,11 @@ a.tabs-primary__tab-link:focus {
 a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
   background-color: transparent;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
-  background-image: -owg(compact(linear-gradient(#e9e9e9, rgba(233, 233, 233, 0)), false, false, false, false, false, false, false, false, false));
-  background-image: -webkit(compact(linear-gradient(#e9e9e9, rgba(233, 233, 233, 0)), false, false, false, false, false, false, false, false, false));
-  background-image: -moz(compact(linear-gradient(#e9e9e9, rgba(233, 233, 233, 0)), false, false, false, false, false, false, false, false, false));
-  background-image: -o(compact(linear-gradient(#e9e9e9, rgba(233, 233, 233, 0)), false, false, false, false, false, false, false, false, false));
-  background-image: compact(linear-gradient(#e9e9e9, rgba(233, 233, 233, 0)), false, false, false, false, false, false, false, false, false);
+  background-image: -owg(linear-gradient(#e9e9e9, rgba(233, 233, 233, 0)));
+  background-image: -webkit(linear-gradient(#e9e9e9, rgba(233, 233, 233, 0)));
+  background-image: -moz(linear-gradient(#e9e9e9, rgba(233, 233, 233, 0)));
+  background-image: -o(linear-gradient(#e9e9e9, rgba(233, 233, 233, 0)));
+  background-image: linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   border-color: #fff; }
 
 /* Secondary tabs. */
@@ -1107,11 +1118,11 @@ a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   -ms-border-radius: 0.75em;
   -o-border-radius: 0.75em;
   border-radius: 0.75em;
-  -webkit-transition: compact(compact(background-color 0.3s, false, false, false, false, false, false, false, false, false) false false);
-  -moz-transition: compact(compact(background-color 0.3s, false, false, false, false, false, false, false, false, false) false false false);
-  -o-transition: compact(compact(background-color 0.3s, false, false, false, false, false, false, false, false, false) false false false);
-  transition: compact(background-color 0.3s, false, false, false, false, false, false, false, false, false);
-  text-shadow: compact(compact(1px 1px 0 false #fff), false, false, false, false, false, false, false, false, false);
+  -webkit-transition: background-color 0.3s false;
+  -moz-transition: background-color 0.3s false false;
+  -o-transition: background-color 0.3s false false;
+  transition: background-color 0.3s;
+  text-shadow: 1px 1px 0 false #fff;
   background-color: #f2f2f2;
   color: #666;
   padding: 0 0.5em; }
@@ -1125,7 +1136,7 @@ a.tabs-secondary__tab-link:focus {
 
 /* line 372, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/components/_misc.scss */
 a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
-  text-shadow: compact(compact(1px 1px 0 false #333), false, false, false, false, false, false, false, false, false);
+  text-shadow: 1px 1px 0 false #333;
   background-color: #666;
   border-color: #000;
   color: #fff; }

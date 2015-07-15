@@ -125,5 +125,9 @@ $tabs-border: #bbb;
 @import "zen-grids/flow";
 @import "zen-grids/background";
 
+// Now we add functions used in the theme.
+@import "functions";
+
 // Now we add our custom helper mixins.
 @import "mixins";
+

@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Functions
+ *
+ * Functions needed in SASS for operations.
+ */
+
+/**
+ * compact
+ * 
+ * Replaces the compact function from compass. This is missing in compass-mixins.
+ */
+@function compact($vars...) {
+  $list: ();
+  @each $var in $vars {
+    @if $var {
+      $list: append($list, $var, comma);
+    }
+  }
+  @return $list;
+}
+ 
