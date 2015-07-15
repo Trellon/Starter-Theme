@@ -36,6 +36,8 @@
 /* SMACSS theme rules */
 /*
  * All layouts and components should be applied within the theme file. There should be no styles in component / layout files, just mixins.
+ * Remove the starter theme file when working with a new site. This is simply a reminder for where code is supposed to go.
+ *
  */
-/* @import "themes/sometheme"; */
+@import "themes/starter";
 
