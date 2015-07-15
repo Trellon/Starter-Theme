@@ -21,6 +21,8 @@ You have to set up your theme in order to get started.
 
 2. Install components with npm
 
+3. Start theming
+
 ## Quickstart
 
 _Make sure you have installed <a href="http://gruntjs.com/getting-started#installing-the-cli" target="_blank">Grunt</a> and <a href="http://bower.io/#install-bower" target="_blank">Bower</a> before you start._
