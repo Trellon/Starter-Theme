@@ -963,6 +963,16 @@ table {
  * $rc-region-inner-margin: Margin for the inner selector. This is where the content is.
  * $rc-region-inner-width: Width of the inner selector. This is the width of the content on the page. 
  */
+/**
+ * @file
+ * Grids
+ * 
+ * Container for zen-grids used to abstract some of the settings.
+ * 
+ */
+/**
+ * DEFAULT VARIABLES
+ */
 /* Component (SMACSS module) rules */
 /*
  * Create distinct mixins for individual page elements. Group them into component files based on common styles in the theme.
