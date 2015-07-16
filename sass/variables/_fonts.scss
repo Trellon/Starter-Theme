@@ -45,6 +45,10 @@ $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
+// Default family names. Do not delete, but feel free to alter.
+$serif:           $times;
+$sans:            $verdana;
+
 // Now create some variables for the font stacks we want to use on this site.
 $base-font-family: $verdana; // The font family set on the html element.
 $font-body:        $verdana;
