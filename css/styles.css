@@ -730,12 +730,37 @@ table {
  * 
  * Container for grids used to abstract some of the settings.
  * 
+ * @TODO: Taken from a previous site. There are some styles in here that do not apply globally. Refactor.
+ * 
  * @TODO: Use the mixins from this file to replace the ones in responsive. This will allow us to 
  * eventually swap out grids throughout a theme all at once..
  * 
  */
+/* DEFAULT VARIABLES */
 /**
- * DEFAULT VARIABLES
+ * ST Grids
+ * Creates a grid of equally sized items. Apply this to the container for the grid items.
+ * 
+ * Example:
+ * 
+ * <div class="view view-articles-view-front">
+ *   <div class="view-content">
+ *     <div class="views-row views-row-1 views-row-odd views-row-first">
+ *       ...
+ *     </div>
+ *     ...
+ *   </div>
+ * </div>
+ * 
+ * Parameters
+ *
+ * $stg-span: The span of each grid item, measured in columns. Defaults to 3 for a 4 column layout.
+ * $stg-columns: The number of columns in the grid. Defaults to 12 for a 4 column layout.
+ * $stg-item-selector: Selector for grid items. Defaults to .views-row.
+ * $stg-height: Optional. The height of each grid item. Defaults to false.
+ * $stg-gutter: Optional. Overrides the default gutters used in Zen. Defaults to 2.25%.
+ * $stg-debug: Optional. Shows default variables for the grid. Defaults to false.
+ *
  */
 /**
  * @file
