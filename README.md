@@ -8,8 +8,9 @@ This theme is organized around the following principles:
 1. SMACSS compliant with well organized code
 2. Beautiful, attractive tyopgrahy presented in a uniform way
 3. Emphasis on horizontal regions spanning the width of the browser
-3. Mobile first apporach with well defined breakpoints used throughout the theme
-4. Very specific application of selectors using mixins instead of markup (similar to Zen Grids)
+4. Mobile first apporach with well defined breakpoints used throughout the theme
+5. Very specific application of selectors using mixins instead of markup (similar to Zen Grids)
+6. Strong workflow production stack to allow efficient theming
 
 # Requirements
 
