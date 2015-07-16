@@ -1,8 +1,8 @@
 {
-  "name": "ajf_new",
+  "name": "starter-theme",
   "version": "1.0.0",
   "private": true,
-  "description": "Grunt for the AJF theme",
+  "description": "Starter Theme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
