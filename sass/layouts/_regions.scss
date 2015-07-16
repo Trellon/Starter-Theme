@@ -53,9 +53,10 @@ $rc-region-inner-width:     100% !default;
   padding:  $rc-region-padding;
   
   #{$rc-region-inner-selector} {
-    margin:   $rc-region-inner-margin;
-    padding:  $rc-region-inner-padding;
-    width:    $rc-region-inner-width;
+    margin:     $rc-region-inner-margin;
+    padding:    $rc-region-inner-padding;
+    width:      $rc-region-inner-width;
+    max-width:  $rc-region-inner-width; // never go beyond the inner selector
   }
 
 } 

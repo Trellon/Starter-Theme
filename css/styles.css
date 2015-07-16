@@ -693,6 +693,49 @@ table {
  */
 /**
  * @file
+ * Regions for containing content.
+ *
+ * Each horizontal region in the theme has an inner-selector used to create content.
+ * This can be used to create full width layouts, where the background spans the window
+ * but the content remains in a fixed position inside the region.
+ *
+ * Horizontal regions should be structured similar to the following markup:
+ *
+ * <section id#"some-selector">
+ *   <div class="section-wrapper>
+ *     ... some content ...
+ *   </div>
+ * </section>
+ *
+ */
+/* DEFAULT VARIABLES */
+/**
+ * REGION CONTROLLER
+ * 
+ * Controls the width and spacing for horizontal regions. Use this when you need to change 
+ * the margins, spacing or width related to a region. 
+ *
+ * Variables:
+ *
+ * $rc-inner-selector: Inner selector for the given region.
+ * $rc-region-padding: Padding for the region.
+ * $rc-region-margin: Margin for the region.
+ * $rc-region-inner-padding: Padding for the inner selector. This is where the content is.
+ * $rc-region-inner-margin: Margin for the inner selector. This is where the content is.
+ * $rc-region-inner-width: Width of the inner selector. This is the width of the content on the page. 
+ */
+/**
+ * @file
+ * Grids
+ * 
+ * Container for grids used to abstract some of the settings.
+ * 
+ */
+/**
+ * DEFAULT VARIABLES
+ */
+/**
+ * @file
  * Positioning for a responsive layout.
  *
  * Define CSS classes to create a fluid grid layout with optional sidebars
@@ -746,13 +789,13 @@ table {
   clear: both; }
 
 /* Navigation bar */
-@media all and (min-width: 480px) {
-  /* line 60, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+@media (min-width: 480px) {
+  /* line 61, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
   #main {
     /* Move all the children of #main down to make room. */
     padding-top: 3em;
     position: relative; }
-  /* line 65, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+  /* line 66, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
   #navigation {
     /* Move the navbar up inside #main's padding. */
     position: absolute;
@@ -763,21 +806,21 @@ table {
 /**
  * Use 3 grid columns for smaller screens.
  */
-@media all and (min-width: 480px) and (max-width: 959px) {
+@media (min-width: 480px) and (max-width: 959px) {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 86, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+  /* line 89, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */ }
-    /* line 88, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 91, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .sidebar-first #content {
       float: left;
       width: 200%;
       margin-left: 100%;
       margin-right: -100%; }
-    /* line 93, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 96, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .sidebar-first .region-sidebar-first {
       float: left;
       width: 100%;
@@ -786,17 +829,17 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 101, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+  /* line 104, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */ }
-    /* line 103, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 106, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .sidebar-second #content {
       float: left;
       width: 200%;
       margin-left: 0%;
       margin-right: -100%; }
-    /* line 108, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 111, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .sidebar-second .region-sidebar-second {
       float: left;
       width: 100%;
@@ -805,24 +848,24 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 116, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+  /* line 119, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */ }
-    /* line 118, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 121, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .two-sidebars #content {
       float: left;
       width: 200%;
       margin-left: 100%;
       margin-right: -100%; }
-    /* line 123, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 126, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .two-sidebars .region-sidebar-first {
       float: left;
       width: 100%;
       margin-left: 0%;
       margin-right: -100%; }
-    /* line 128, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 131, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .two-sidebars .region-sidebar-second {
       float: left;
       width: 300%;
@@ -833,7 +876,7 @@ table {
       /* Span 1 column, starting in the 1st column from left. */
       /* Span 1 column, starting in the 2nd column from left. */
       /* Span 1 column, starting in the 3rd column from left. */ }
-      /* line 134, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+      /* line 137, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
       .two-sidebars .region-sidebar-second .block {
         padding-left: 10px;
         padding-right: 10px;
@@ -841,20 +884,20 @@ table {
         -webkit-box-sizing: border-box;
         -ms-box-sizing: border-box;
         box-sizing: border-box; }
-      /* line 138, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+      /* line 141, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
       .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
         float: left;
         width: 100%;
         margin-left: 0%;
         margin-right: -100%;
         clear: left; }
-      /* line 143, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+      /* line 146, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
       .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
         float: left;
         width: 100%;
         margin-left: 100%;
         margin-right: -100%; }
-      /* line 147, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+      /* line 150, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
       .two-sidebars .region-sidebar-second .block:nth-child(3n) {
         float: left;
         width: 100%;
@@ -864,21 +907,21 @@ table {
 /**
  * Use 5 grid columns for larger screens.
  */
-@media all and (min-width: 960px) {
+@media (min-width: 960px) {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 164, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+  /* line 168, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */ }
-    /* line 166, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 170, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .sidebar-first #content {
       float: left;
       width: 400%;
       margin-left: 100%;
       margin-right: -100%; }
-    /* line 171, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 175, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .sidebar-first .region-sidebar-first {
       float: left;
       width: 100%;
@@ -887,17 +930,17 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 179, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+  /* line 183, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */ }
-    /* line 181, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 185, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .sidebar-second #content {
       float: left;
       width: 400%;
       margin-left: 0%;
       margin-right: -100%; }
-    /* line 186, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 190, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .sidebar-second .region-sidebar-second {
       float: left;
       width: 100%;
@@ -906,73 +949,30 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 194, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+  /* line 198, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */ }
-    /* line 196, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 200, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .two-sidebars #content {
       float: left;
       width: 300%;
       margin-left: 100%;
       margin-right: -100%; }
-    /* line 201, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 205, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .two-sidebars .region-sidebar-first {
       float: left;
       width: 100%;
       margin-left: 0%;
       margin-right: -100%; }
-    /* line 206, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
+    /* line 210, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_responsive.scss */
     .two-sidebars .region-sidebar-second {
       float: left;
       width: 100%;
       margin-left: 400%;
       margin-right: -100%; } }
 
-/**
- * @file
- * Regions for containing content.
- *
- * Each horizontal region in the theme has an inner-selector used to create content.
- * This can be used to create full width layouts, where the background spans the window
- * but the content remains in a fixed position inside the region.
- *
- * Horizontal regions should be structured similar to the following markup:
- *
- * <section id#"some-selector">
- *   <div class="section-wrapper>
- *     ... some content ...
- *   </div>
- * </section>
- *
- */
-/* DEFAULT VARIABLES */
-/**
- * REGION CONTROLLER
- * 
- * Controls the width and spacing for horizontal regions. Use this when you need to change 
- * the margins, spacing or width related to a region. 
- *
- * Variables:
- *
- * $rc-inner-selector: Inner selector for the given region.
- * $rc-region-padding: Padding for the region.
- * $rc-region-margin: Margin for the region.
- * $rc-region-inner-padding: Padding for the inner selector. This is where the content is.
- * $rc-region-inner-margin: Margin for the inner selector. This is where the content is.
- * $rc-region-inner-width: Width of the inner selector. This is the width of the content on the page. 
- */
-/**
- * @file
- * Grids
- * 
- * Container for zen-grids used to abstract some of the settings.
- * 
- */
-/**
- * DEFAULT VARIABLES
- */
 /* Component (SMACSS module) rules */
 /*
  * Create distinct mixins for individual page elements. Group them into component files based on common styles in the theme.
@@ -1806,7 +1806,8 @@ tr.selected td {
     header#header div.section-wrapper, section#above-content-one div.section-wrapper, section#above-content-two div.section-wrapper, section#above-content-three div.section-wrapper, section#main div.section-wrapper, section#below-content-one div.section-wrapper, section#below-content-two div.section-wrapper, section#below-content-three div.section-wrapper, footer#footer div.section-wrapper {
       margin: 0.225em;
       padding: 0.225em;
-      width: 100%; } }
+      width: 100%;
+      max-width: 100%; } }
 
 @media (min-width: 480px) and (max-width: 959px) {
   /* line 21, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/themes/_regions.scss */
@@ -1817,7 +1818,8 @@ tr.selected td {
     header#header div.section-wrapper, section#above-content-one div.section-wrapper, section#above-content-two div.section-wrapper, section#above-content-three div.section-wrapper, section#main div.section-wrapper, section#below-content-one div.section-wrapper, section#below-content-two div.section-wrapper, section#below-content-three div.section-wrapper, footer#footer div.section-wrapper {
       margin: 0.375em;
       padding: 0.375em;
-      width: 100%; } }
+      width: 100%;
+      max-width: 100%; } }
 
 @media (min-width: 960px) {
   /* line 32, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/themes/_regions.scss */
@@ -1828,6 +1830,7 @@ tr.selected td {
     header#header div.section-wrapper, section#above-content-one div.section-wrapper, section#above-content-two div.section-wrapper, section#above-content-three div.section-wrapper, section#main div.section-wrapper, section#below-content-one div.section-wrapper, section#below-content-two div.section-wrapper, section#below-content-three div.section-wrapper, footer#footer div.section-wrapper {
       margin: 0em;
       padding: 0em;
-      width: 960px; } }
+      width: 960px;
+      max-width: 960px; } }
 
 /*# sourceMappingURL=styles.css.map */

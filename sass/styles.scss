@@ -22,9 +22,9 @@
  * A layout should provide styles that control the placement of elements.
  * A layout can also include media queries that transform the way information displays at different resolutions.
  */
-@import "layouts/responsive";
 @import "layouts/regions";
 @import "layouts/grids";
+@import "layouts/responsive";
 
 /* Component (SMACSS module) rules */
 /*
