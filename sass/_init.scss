@@ -1,5 +1,5 @@
 //
-// Initialization partial
+// Starter Theme Initialization partial
 //
 // To make it easier to use all variables and mixins in any Sass file in this
 // theme, each .scss file has a @import "init" declaration. And this _init.scss
@@ -15,6 +15,8 @@
 // - Next, we set any colors used for the theme. There are a number of color
 //   variables defined in the colors partial, and custom colors should be 
 //    defined there as well.
+// - Next, we add functions used in the theme. Anything that's needed globally
+//   should go in this partial.
 // 
 // This initialization partial is organized in this way:
 // - Next we import Compass plug-ins (Sass mixin libraries).
@@ -52,14 +54,15 @@ $legacy-support-for-ie8: true;
 //
 // Font faces, stacks and sizes.
 //
-@include "variables/fonts";
+@import "variables/fonts";
 
 //
 // Colors, etc.
 //
-@include "variables/colors";
+@import "variables/colors";
 
-
+// Now we add functions used in the theme.
+@import "functions";
 
 // =============================================================================
 // Partials to be shared with all .scss files.
@@ -81,8 +84,6 @@ $legacy-support-for-ie8: true;
 @import "zen-grids/flow";
 @import "zen-grids/background";
 
-// Now we add functions used in the theme.
-@import "functions";
 
 // Now we add our custom helper mixins.
 @import "mixins";
