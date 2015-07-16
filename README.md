@@ -3,13 +3,14 @@
 This is a zen subtheme used for starting a new theming project. It includes a Gruntfile that enables libsass, livereload, kss-stylesheets 
 and a number of other features to make your theming experience more pleasurable.
 
-This theme is organized around the following principles:
+The following principles guide the use of this theme:
 
 1. SMACSS compliant with well organized code
 2. Beautiful, attractive tyopgrahy presented in a uniform way
 3. Emphasis on horizontal regions spanning the width of the browser
 4. Mobile first apporach supported by global breakpoints 
-5. Solution to applicability issues through selector abstraction
+5. The use of global default variables for common theme conditions
+6. Solution to applicability issues through selector abstraction
 
 One of the big problems with theming is applicability. There is often a set of styles that can be applied globally, and another 
 (much larger) set of styles that need to be applied to very specific selectors in very specific places. This creates situations where 
