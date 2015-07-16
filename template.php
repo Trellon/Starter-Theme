@@ -7,6 +7,15 @@
  * @see https://drupal.org/node/1728096
  */
 
+/**
+ * Implements theme_menu_link()
+ */
+function startertheme_menu_link(array $variables) {
+	// add a unqiue class for every menu item.
+	$variables['element']['#attributes']['class'][] = 'menu-' . $variables['element']['#original_link']['mlid'];
+	$variables['element']['#localized_options']['attributes']['class'][] = 'menu-' . $variables['element']['#original_link']['mlid'];
+	return theme_menu_link($variables);
+}
 
 /**
  * Override or insert variables into the maintenance page template.
@@ -130,3 +139,4 @@ function startertheme_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
