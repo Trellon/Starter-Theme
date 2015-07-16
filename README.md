@@ -28,15 +28,10 @@ consistent use of styles throughout each website.
 
 * Grunt - installation instructions here: http://gruntjs.com/getting-started#installing-the-cli
 * Bower - installation instructions here: http://bower.io/#install-bower
-* Drupal
 
 # Instructions for Getting Started
 
-There are a number of ways to get started with this theme.
-
-## Overview
-
-You have to set up your theme in order to get started.
+Once Grunt and Bower are installed, set up your theme workflow as follows.
 
 1. Install components with bower
 
@@ -45,8 +40,6 @@ You have to set up your theme in order to get started.
 3. Start theming
 
 ## Quickstart
-
-_Make sure you have installed <a href="http://gruntjs.com/getting-started#installing-the-cli" target="_blank">Grunt</a> and <a href="http://bower.io/#install-bower" target="_blank">Bower</a> before you start._
 
     // install all bower components
     bower install
