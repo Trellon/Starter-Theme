@@ -8,9 +8,20 @@ This theme is organized around the following principles:
 1. SMACSS compliant with well organized code
 2. Beautiful, attractive tyopgrahy presented in a uniform way
 3. Emphasis on horizontal regions spanning the width of the browser
-4. Mobile first apporach with well defined breakpoints used throughout the theme
-5. Very specific application of selectors using mixins instead of markup (similar to Zen Grids)
-6. Strong workflow production stack to allow efficient theming
+4. Mobile first apporach supported by global breakpoints 
+5. Solution to applicability issues through selector abstraction
+
+One of the big problems with theming is applicability. There is often a set of styles that can be applied globally, and another 
+(much larger) set of styles that need to be applied to very specific selectors in very specific places. This creates situations where 
+code reuse goes down, time to compile goes up, and there's an overall loss of velocity around styling a website.
+
+This theme deals with applicability through abstraction. Common theming challenges, such as grids, icons, font styles, blocks, 
+menus and other components are defined in layouts and components as mixins. Each mixin has variables that define selectors, which allow them
+to be applied to a range of different situations. Instead of organizing actual styles in the layout and component partials, these are used
+to define mixins that are later applied in theme files.
+
+The result is increased effiicency when implementing very complex themes, reduction of effort related to maintaining a theme, and more 
+consistent use of styles throughout each website.
 
 # Requirements
 
