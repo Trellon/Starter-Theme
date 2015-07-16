@@ -6,9 +6,10 @@ and a number of other features to make your theming experience more pleasurable.
 This theme is organized around the following principles:
 
 1. SMACSS compliant with well organized code
-2. Uniform tyopgrahy for beautiful, consistent typographic appearance
-3. Mobile first apporach emphasizing horizontal regions that span width of browser
-4. Very specific application of selectors using mixins within theme files (similar to Zen Grids)
+2. Beautiful, attractive tyopgrahy presented in a uniform way
+3. Emphasis on horizontal regions spanning the width of the browser
+3. Mobile first apporach with well defined breakpoints used throughout the theme
+4. Very specific application of selectors using mixins instead of markup (similar to Zen Grids)
 
 # Requirements
 
@@ -57,4 +58,5 @@ _From Bower_
 2. compass-mixins: a replacement for Compass that works with libsass.
 3. compass-breakpoint: a media query mixin that sometimes works with libsass (we usually find another way).
 4. zen-grids: This is Zen Grids 2, used in place of the version that comes with zen.
+5. breakpoint-sass: used for creating breakpoints.
 
