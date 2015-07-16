@@ -16,9 +16,9 @@ One of the big problems with theming is applicability. There is often a set of s
 code reuse goes down, time to compile goes up, and there's an overall loss of velocity around styling a website.
 
 This theme deals with applicability through abstraction. Common theming challenges, such as grids, icons, font styles, blocks, 
-menus and other components are defined in layouts and components as mixins. Each mixin has variables that define selectors, which allow them
-to be applied to a range of different situations. Instead of organizing actual styles in the layout and component partials, these are used
-to define mixins that are later applied in theme files.
+menus and other components are defined in layouts and components partials as mixins. Each mixin has variables that define selectors, 
+which allows them to be applied to a range of different situations. Instead of organizing styles within layout and component 
+partials, these are used to define mixins that are later applied in theme files.
 
 The result is increased effiicency when implementing very complex themes, reduction of effort related to maintaining a theme, and more 
 consistent use of styles throughout each website.
