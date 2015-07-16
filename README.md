@@ -49,7 +49,7 @@ Once Grunt and Bower are installed, set up your theme workflow as follows.
 
 # Included components
 
-Gruntfile.js includes a number of components to make theming easier.
+A number of components are included to make theming easier.
 
 _From Grunt_
 
