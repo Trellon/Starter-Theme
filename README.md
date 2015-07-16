@@ -3,6 +3,13 @@
 This is a zen subtheme used for starting a new theming project. It includes a Gruntfile that enables libsass, livereload, kss-stylesheets 
 and a number of other features to make your theming experience more pleasurable.
 
+### Principles
+
+1. SMACSS compliant with well organized code
+2. Uniform tyopgrahy for beautiful, consistent typographic appearance
+3. Mobile first apporach emphasizing horizontal regions that span width of browser
+4. Very specific application of selectors using mixins within theme files (similar to Zen Grids)
+
 # Requirements
 
 * Grunt - http://gruntjs.com/getting-started#installing-the-cli
