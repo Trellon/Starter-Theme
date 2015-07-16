@@ -1,0 +1,68 @@
+/**
+ * @file
+ * Regions for containing content.
+ *
+ * Each horizontal region in the theme has an inner-selector used to create content.
+ * This can be used to create full width layouts, where the background spans the window
+ * but the content remains in a fixed position inside the region.
+ *
+ * Horizontal regions should be structured similar to the following markup:
+ *
+ * <section id#"some-selector">
+ *   <div class="section-wrapper>
+ *     ... some content ...
+ *   </div>
+ * </section>
+ *
+ */
+ 
+/* DEFAULT VARIABLES */ 
+$rc-region-selector:        "" !default; 
+$rc-region-padding:         0em !default; 
+$rc-region-margin:          0em !default; 
+$rc-region-inner-selector:  "" !default; 
+$rc-region-inner-padding:   0em !default; 
+$rc-region-inner-margin:    0em !default; 
+$rc-region-inner-width:     100% !default; 
+ 
+/**
+ * REGION CONTROLLER
+ * 
+ * Controls the width and spacing for horizontal regions. Use this when you need to change 
+ * the margins, spacing or width related to a region. 
+ *
+ * Variables:
+ *
+ * $rc-inner-selector: Inner selector for the given region.
+ * $rc-region-padding: Padding for the region.
+ * $rc-region-margin: Margin for the region.
+ * $rc-region-inner-padding: Padding for the inner selector. This is where the content is.
+ * $rc-region-inner-margin: Margin for the inner selector. This is where the content is.
+ * $rc-region-inner-width: Width of the inner selector. This is the width of the content on the page. 
+ */ 
+@mixin region-controller (
+  $rc-inner-selector:       $rc-inner-selector,
+  $rc-region-padding:       $rc-region-padding,
+  $rc-region-margin:        $rc-region-margin,
+  $rc-region-inner-padding: $rc-region-inner-padding,
+  $rc-region-inner-margin:  $rc-region-inner-margin,
+  $rc-region-inner-width:   $rc-region-inner-width
+) {
+
+  margin:   $rc-region-margin;
+  padding:  $rc-region-padding;
+  
+  #{$rc-inner-selector} {
+    margin:   $rc-region-inner-margin;
+    padding:  $rc-region-inner-padding;
+    width:    $rc-region-inner-width;
+  }
+
+} 
+
+// Applys region settings to every region on the page.
+#{$rc-region-selector}{
+  @include  region-controller (
+    $rc-inner-selector: $rc-region-inner-selector
+  );
+}

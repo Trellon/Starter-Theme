@@ -1,0 +1,45 @@
+/**
+ * @file
+ * Regions
+ * 
+ * Sets variables for working with horizontal regions in the theme.
+ */
+
+/**
+ * Region selectors.
+ */ 
+/**
+ * This variable selects all of the horizontal regions in a theme. Use it to apply styles to all of the ones appearing on the page, all at once.
+ */ 
+$rc-region-selector:        "header#header, section#above-content-one, section#above-content-two, section#above-content-three, section#main, section#below-content-one, section#below-content-two, section#below-content-three, footer#footer"; 
+
+/**
+ * This variable selects all of the inner selectors for the horizontal regions specified above.
+ */ 
+$rc-region-inner-selector:  "div.section-wrapper"; 
+
+/**
+ * Region layouts.
+ */ 
+
+/**
+ * These variables set margin and padding on all horizontal regions specified above. 
+ * By default, there are no margins and no padding on any region. 
+ * To change this for a specific region, remove it from the list of region selectors.
+ */ 
+$rc-region-padding:         0em; 
+$rc-region-margin:          0em; 
+
+/**
+ * These variables set margin and padding on all inner selectors in horizontal regions specified above. 
+ * By default, there are no margins and no padding on any inner selectors. 
+ * To change this for a specific region, remove it from the list of region selectors.
+ */ 
+$rc-region-inner-padding:   0em; 
+$rc-region-inner-margin:    0em; 
+
+/**
+ * This variables sets the width of all regions on a site.
+ * It is set to 100% by default. This should be changed for specific breakpoints.
+ */ 
+$rc-region-inner-width:     100%; 
