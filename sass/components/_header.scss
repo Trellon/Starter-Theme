@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Header
+ *
+ * Mixin for defining styles in the header
+ */
+ 
+/* DEFAULT VARIABLES */
+$st-header-margin:                  false;
+$st-header-padding:                 false !default;
+$st-header-background-color:   false !default;
+
+/**
+ *
+ */
+@mixin st-header (
+  $st-header-margin: $st-header-margin,
+  $st-header-padding: $st-header-padding,
+  $st-header-background-color: $st-header-background-color
+) {
+  
+  @if $st-header-margin != false {
+    margin: $st-header-margin;
+  }
+  @if $st-header-padding != false {
+    padding: $st-header-padding;
+  }
+  @if $st-header-background-color != false {
+    background-color: $st-header-background-color;
+  }
+
+}  
+ 

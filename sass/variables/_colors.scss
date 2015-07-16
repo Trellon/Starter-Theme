@@ -15,11 +15,18 @@ $black:         #000;
  * Named color variables go here. These variables should be used in the theme and exist any time we 
  * usee starter theme.
  */
-$page-bg-color:   $white; // background color for a page
+ 
+// text
 $base-text-color: $black; // applied to fonts in the body tag
 
+// page
+$page-bg-color:   $white; // background color for a page
+
+// header
+$st-header-background-color:  $white; // background for the header
+
 /**
- * Other named color variables go here. Feel free to define your own, but leave them separate from the 
- * rest of the theme.
+ * Other named color variables go here. Feel free to define your own, but keep them separate from the 
+ * rest of the variables in this section.
  */
 
