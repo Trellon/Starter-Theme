@@ -64,6 +64,11 @@ $legacy-support-for-ie8: true;
 // 
 @import "variables/regions";
 
+// 
+// Breakpoints
+// 
+@import "variables/breakpoints";
+
 // Now we add functions used in the theme.
 @import "functions";
 
@@ -94,9 +99,12 @@ $legacy-support-for-ie8: true;
 // Now we add our custom helper mixins.
 @import "mixins";
 
+// Now we add our custom helper mixins.
+@import "breakpoint";
+
 // =============================================================================
 // Font registry.
 // =============================================================================
-@import "variables/font-registry"
+@import "variables/font-registry";
 
 

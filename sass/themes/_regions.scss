@@ -1,0 +1,46 @@
+/**
+ * @file
+ * Regions.
+ *
+ * Applies a default set of styles to all horizontal regions on the page.
+ * The media queries used by Zen are simulated  here. Feel free to adjust them for your own theme.
+ */
+ 
+// Smartphones
+@include breakpoint($bp-smartphones) {
+  // Makes inner selectors 100% width and applies padding to the sides.
+  #{$rc-region-selector}{
+    @include  region-controller (
+      $rc-region-inner-padding:   rhythm(.15),
+      $rc-region-inner-margin:    rhythm(.15),
+      $rc-region-inner-width:     100%
+    );
+  }
+} 
+
+// Desktops
+@include breakpoint($bp-tablets-up) {
+  // Makes inner selectors 100% width and applies padding to the sides.
+  #{$rc-region-selector}{
+    @include  region-controller (
+      $rc-region-inner-padding:   rhythm(.25),
+      $rc-region-inner-margin:    rhythm(.25),
+      $rc-region-inner-width:     100%
+    );
+  }
+}
+
+// Wide Desktops
+@include breakpoint($bp-desktops) {
+  // Makes inner selectors 100% width and removes all padding
+  #{$rc-region-selector}{
+    @include  region-controller (
+      $rc-region-inner-padding:   $rc-region-inner-padding,
+      $rc-region-inner-margin:    $rc-region-inner-margin,
+      $rc-region-inner-width:     960px
+    );
+  }
+}
+ 
+ 
+ 

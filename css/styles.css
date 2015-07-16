@@ -63,6 +63,12 @@
  */
 /**
  * @file
+ * Regions
+ * 
+ * Sets breakpoints used in the theme.
+ */
+/**
+ * @file
  * Functions
  *
  * Functions needed in SASS for operations.
@@ -932,16 +938,6 @@ table {
  * $rc-region-inner-margin: Margin for the inner selector. This is where the content is.
  * $rc-region-inner-width: Width of the inner selector. This is the width of the content on the page. 
  */
-/* line 61, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_regions.scss */
-header#header, section#above-content-one, section#above-content-two, section#above-content-three, section#main, section#below-content-one, section#below-content-two, section#below-content-three, footer#footer {
-  margin: 0em;
-  padding: 0em; }
-  /* line 53, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_regions.scss */
-  header#header div.section-wrapper, section#above-content-one div.section-wrapper, section#above-content-two div.section-wrapper, section#above-content-three div.section-wrapper, section#main div.section-wrapper, section#below-content-one div.section-wrapper, section#below-content-two div.section-wrapper, section#below-content-three div.section-wrapper, footer#footer div.section-wrapper {
-    margin: 0em;
-    padding: 0em;
-    width: 100%; }
-
 /* Component (SMACSS module) rules */
 /*
  * Create distinct mixins for individual page elements. Group them into component files based on common styles in the theme.
@@ -1750,5 +1746,53 @@ tr.selected td {
  * Remove the starter theme file when working with a new site. This is simply a reminder for where code is supposed to go.
  *
  */
+/**
+ * @file
+ * Theme file.
+ *
+ * This file demonstrates how to organize code used in the theme.
+ * If the layouts and components are all mixins, this should give complete control over how styles are applied.
+ * Create partials to thematically organize the styles that are being applied.
+ *
+ */
+/**
+ * @file
+ * Regions.
+ *
+ * Applies a default set of styles to all horizontal regions on the page.
+ * The media queries used by Zen are simulated  here. Feel free to adjust them for your own theme.
+ */
+@media (min-width: 480px) {
+  /* line 10, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/themes/_regions.scss */
+  header#header, section#above-content-one, section#above-content-two, section#above-content-three, section#main, section#below-content-one, section#below-content-two, section#below-content-three, footer#footer {
+    margin: 0em;
+    padding: 0em; }
+    /* line 53, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_regions.scss */
+    header#header div.section-wrapper, section#above-content-one div.section-wrapper, section#above-content-two div.section-wrapper, section#above-content-three div.section-wrapper, section#main div.section-wrapper, section#below-content-one div.section-wrapper, section#below-content-two div.section-wrapper, section#below-content-three div.section-wrapper, footer#footer div.section-wrapper {
+      margin: 0.225em;
+      padding: 0.225em;
+      width: 100%; } }
+
+@media (min-width: 480px) and (max-width: 959px) {
+  /* line 21, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/themes/_regions.scss */
+  header#header, section#above-content-one, section#above-content-two, section#above-content-three, section#main, section#below-content-one, section#below-content-two, section#below-content-three, footer#footer {
+    margin: 0em;
+    padding: 0em; }
+    /* line 53, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_regions.scss */
+    header#header div.section-wrapper, section#above-content-one div.section-wrapper, section#above-content-two div.section-wrapper, section#above-content-three div.section-wrapper, section#main div.section-wrapper, section#below-content-one div.section-wrapper, section#below-content-two div.section-wrapper, section#below-content-three div.section-wrapper, footer#footer div.section-wrapper {
+      margin: 0.375em;
+      padding: 0.375em;
+      width: 100%; } }
+
+@media (min-width: 960px) {
+  /* line 32, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/themes/_regions.scss */
+  header#header, section#above-content-one, section#above-content-two, section#above-content-three, section#main, section#below-content-one, section#below-content-two, section#below-content-three, footer#footer {
+    margin: 0em;
+    padding: 0em; }
+    /* line 53, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/layouts/_regions.scss */
+    header#header div.section-wrapper, section#above-content-one div.section-wrapper, section#above-content-two div.section-wrapper, section#above-content-three div.section-wrapper, section#main div.section-wrapper, section#below-content-one div.section-wrapper, section#below-content-two div.section-wrapper, section#below-content-three div.section-wrapper, footer#footer div.section-wrapper {
+      margin: 0em;
+      padding: 0em;
+      width: 960px; } }
 
 /*# sourceMappingURL=styles.css.map */
