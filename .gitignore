@@ -3,7 +3,6 @@
 .project
 .settings
 
-
 # Ignore bower components and npm modules
 bower_components
 node_modules
