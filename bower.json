@@ -20,5 +20,8 @@
     "compass-breakpoint": "at-import/breakpoint#~2.6.1",
     "zen-grids": "JohnAlbin/zen-grids#~2.0.0-beta.3",
     "fontography": "https://github.com/Trellon/fontography.git"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "~2.6.1"
   }
 }

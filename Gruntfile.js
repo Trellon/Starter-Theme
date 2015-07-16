@@ -38,7 +38,7 @@ module.exports = function(grunt) {
     // libsass
     sass: {
       options: {
-        includePaths: ['bower_components/fontography/stylesheets', 'bower_components/compass-mixins/lib', 'bower_components/zen-grids/stylesheets', 'bower_components/Sassy-Buttons/stylesheets', 'bower_components/compass-breakpoint/stylesheets'],
+        includePaths: ['bower_components/breakpoint-sass/stylesheets', 'bower_components/fontography/stylesheets', 'bower_components/compass-mixins/lib', 'bower_components/zen-grids/stylesheets', 'bower_components/Sassy-Buttons/stylesheets'],
         sourceMap: true,
         sourceComments: true
       },
