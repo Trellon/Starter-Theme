@@ -3,7 +3,7 @@
 This is a zen subtheme used for starting a new theming project. It includes a Gruntfile that enables libsass, livereload, kss-stylesheets 
 and a number of other features to make your theming experience more pleasurable.
 
-### Principles
+This theme is organized around the following principles:
 
 1. SMACSS compliant with well organized code
 2. Uniform tyopgrahy for beautiful, consistent typographic appearance
