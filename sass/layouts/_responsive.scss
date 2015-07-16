@@ -56,7 +56,8 @@ $zen-auto-include-grid-item-base: false;
 }
 
 /* Navigation bar */
-@media all and (min-width: 480px) {
+// @media all and (min-width: 480px) {
+@include breakpoint($bp-smartphones) {
   #main {
     /* Move all the children of #main down to make room. */
     padding-top: $nav-height;
@@ -76,7 +77,9 @@ $zen-auto-include-grid-item-base: false;
 /**
  * Use 3 grid columns for smaller screens.
  */
-@media all and (min-width: 480px) and (max-width: 959px) {
+ 
+// @media all and (min-width: 480px) and (max-width: 959px) {
+@include breakpoint($bp-tablets-up) {
 
   $zen-column-count: 3;
 
@@ -154,8 +157,9 @@ $zen-auto-include-grid-item-base: false;
 /**
  * Use 5 grid columns for larger screens.
  */
-@media all and (min-width: 960px) {
-
+// @media all and (min-width: 960px) {
+@include breakpoint($bp-desktops) {
+  
   $zen-column-count: 5;
 
   /**
