@@ -1,0 +1,23 @@
+/**
+ * @file
+ * Colors
+ * 
+ * Creates a font registry with preset font styles that can be used anywhere in the theme.
+ */
+
+/**
+ * Standard font styles go here. Feel free to alter them, but don't delete them.
+ */
+
+// Normal is used in normalize.scss and should never be removed.
+@include fontography-register-style(
+  $fonto-style-name:  'normal',
+  $fonto-style-color:  $black,
+  $fonto-style-size:   $base-font-size,
+  $fonto-style-family: $sans
+);
+
+/**
+ * Other font styles go here. Organize them thematically, i.e. header, nodes, comments, etc.
+ */
+ 

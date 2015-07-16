@@ -6,10 +6,9 @@
 // file is in charge of importing all the other partials needed for the theme.
 //
 // Unlike a vanilla zen subtheme, all variables are organized into their own
-// partials. This is done to keep this file more logically organized and ensure
-// it remains readable.
+// partials. This is done to make the file nicer to read.
 //
-// The partials are organized this way:
+// The variable partials are organized this way:
 // - First, we set up fonts. Font families, base-font-size and base line height
 //   are stored in the fonts partial.
 // - Next, we set any colors used for the theme. There are a number of color
@@ -18,7 +17,7 @@
 // - Next, we add functions used in the theme. Anything that's needed globally
 //   should go in this partial.
 // 
-// This initialization partial is organized in this way:
+// The is organized this weay:
 // - Next we import Compass plug-ins (Sass mixin libraries).
 // - Last we define our custom mixins for this theme.
 //
@@ -50,7 +49,6 @@ $legacy-support-for-ie6: false;
 $legacy-support-for-ie7: false;
 $legacy-support-for-ie8: true;
 
-
 //
 // Font faces, stacks and sizes.
 //
@@ -79,12 +77,21 @@ $legacy-support-for-ie8: true;
 // Helps set up a vertical rhythm.
 @import "compass/typography/vertical_rhythm";
 
+// Add grid support
 // We are replacing the default zen grids with the new zen grids.
 @import "zen-grids";
 @import "zen-grids/flow";
 @import "zen-grids/background";
 
+// Add fontography to create the font registry
+@import "fontography";
 
 // Now we add our custom helper mixins.
 @import "mixins";
+
+// =============================================================================
+// Font registry.
+// =============================================================================
+@import "variables/font-registry"
+
 
