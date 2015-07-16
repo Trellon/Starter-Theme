@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Node
+ *
+ * Mixin for defining styles in the node
+ */
+ 
+/* DEFAULT VARIABLES */
+$st-node-margin:                  false;
+$st-node-padding:                 false !default;
+$st-node-background-color:   false !default;
+
+/**
+ *
+ */
+@mixin st-node (
+  $st-node-margin: $st-node-margin,
+  $st-node-padding: $st-node-padding,
+  $st-node-background-color: $st-node-background-color
+) {
+  
+  @if $st-node-margin != false {
+    margin: $st-node-margin;
+  }
+  @if $st-node-padding != false {
+    padding: $st-node-padding;
+  }
+  @if $st-node-background-color != false {
+    background-color: $st-node-background-color;
+  }
+
+}  
+ 

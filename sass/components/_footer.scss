@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Footer
+ *
+ * Mixin for defining styles in the footer
+ */
+ 
+/* DEFAULT VARIABLES */
+$st-footer-margin:                  false;
+$st-footer-padding:                 false !default;
+$st-footer-background-color:   false !default;
+
+/**
+ *
+ */
+@mixin st-footer (
+  $st-footer-margin: $st-footer-margin,
+  $st-footer-padding: $st-footer-padding,
+  $st-footer-background-color: $st-footer-background-color
+) {
+  
+  @if $st-footer-margin != false {
+    margin: $st-footer-margin;
+  }
+  @if $st-footer-padding != false {
+    padding: $st-footer-padding;
+  }
+  @if $st-footer-background-color != false {
+    background-color: $st-footer-background-color;
+  }
+
+}  
+ 
