@@ -26,8 +26,8 @@ consistent use of styles throughout each website.
 
 # Requirements
 
-* Grunt - http://gruntjs.com/getting-started#installing-the-cli
-* Bower - http://bower.io/#install-bower
+* Grunt - installation instructions here: http://gruntjs.com/getting-started#installing-the-cli
+* Bower - installation instructions here: http://bower.io/#install-bower
 * Drupal
 
 # Instructions for Getting Started
