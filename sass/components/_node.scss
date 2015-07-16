@@ -9,14 +9,25 @@
 $st-node-margin:                  false;
 $st-node-padding:                 false !default;
 $st-node-background-color:   false !default;
+$st-node-title-selector:          H2.node-title !default;
+$st-node-title-font-style:        false !default;
+$st-node-link-selector:           div.links !default;
+$st-node-link-padding:            false  !default;
+$st-node-link-margin:             false !default;
 
 /**
- *
+ * ST NODE
  */
 @mixin st-node (
   $st-node-margin: $st-node-margin,
   $st-node-padding: $st-node-padding,
-  $st-node-background-color: $st-node-background-color
+  $st-node-background-color: $st-node-background-color,
+  $st-node-title-selector: $st-node-title-selector,
+  $st-node-title-font-style: $st-node-title-font-style,
+  $st-node-link-selector: $st-node-link-selector,
+  $st-node-link-padding: $st-node-link-padding,
+  $st-node-link-margin: $st-node-link-margin
+  
 ) {
   
   @if $st-node-margin != false {
@@ -27,6 +38,25 @@ $st-node-background-color:   false !default;
   }
   @if $st-node-background-color != false {
     background-color: $st-node-background-color;
+  }
+  
+  // node titles
+  @if $st-node-title-selector != false {
+    #{$st-node-title-selector}{
+      @if $st-node-title-font-style != false {
+        @include fontography($st-node-title-font-style);
+      }
+    }
+  }
+  
+  // links
+  @if $st-node-link-selector != false {
+    @if $st-node-link-margin != false {
+      margin: $st-node-link-margin;
+    }
+    @if $st-node-link-padding != false {
+      padding: $st-node-link-padding;
+    }
   }
 
 }  
