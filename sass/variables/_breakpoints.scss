@@ -3,10 +3,35 @@
  * Regions
  * 
  * Sets breakpoints used in the theme.
+ * 
+ * This theme uses Breakpoint for media queries - http://breakpoint-sass.com/
+ * 
+ * The default breakpoints provided in this file are the ones used in Zen. They are included 
+ * as a way of maintaining compatibility with the region settings in the responsive.scss 
+ * partial.
+ * 
+ * You are free to add breakpoints for specific reselutions to this file. You are encouraged
+ * to keep the defaults in place and adjust as needed instead of deleting them. For any custom 
+ * Breakpoints, please proceed the name with $bp- in order to differentiate between variables
+ * used in other components.
+ * 
+ * For reference, here is a complete list of common breakpoints.
+ * 
+ * https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints
+ * 
+ * ... and for specific devices:
+ * 
+ * https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
  */
 
+/**
+ * DEFAULT BREAKPOINTS
+ */
 $bp-smartphones: 480px; // smartphones
 $bp-tablets-up:  480px 959px; // tablets and anything up to a wide desktop
 $bp-desktops:    960px;  // wide desktops
 
+/**
+ * CUSTOM BREAKPOINTS
+ */
 
