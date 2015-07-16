@@ -1,0 +1,156 @@
+/**
+ * @file
+ * Menus
+ * 
+ * Mixins for styling drop down menus in AbleOrganizer. Includes the following items:
+ * - ST DROP DOWN: Make something a drop down menu with pure CSS.
+ * 
+ * 
+ */
+  
+/**
+ * DEFAULT VARIABLES
+ * Default settings for drop down menus.
+ * See mixin documentation for explanations.
+ */
+$st-menu-style: down !default;
+$st-menu-justify: full !default;
+$st-menu-trigger-selector: 'H2.pane-title, H2.block-title' !default;
+$st-menu-trigger-style: false !default;
+$st-menu-menu-selector: 'UL.menu' !default;
+$st-menu-menu-style: false !default;
+$st-menu-element-selector: LI !default;
+$st-menu-element-style: false !default;
+$st-menu-include-transitions: true !default;
+$st-menu-border: false !default;
+$st-menu-border-radius: false !default;
+$st-menu-border-shadow: false !default;
+$st-menu-top-offset: $base-font-size * 2.2;
+
+/**
+ * ST DROP DOWN MENU
+ *
+ * Creates a CSS drop down menu. Useful when you need to display a list after hovering over an element.
+ * Menus appear beneath the triggering element.
+ * Menus can be left justified, right justified, or at the width of the triggering element.
+ * 
+ * - Trigger is the element a user rolls over to make the menu appear.
+ * - Menu is the container for the menu elements.
+ * - Element applies to each element in the menu.
+ * 
+ * Example Markup:
+ * 
+ * <div id="block-menu-something" class="block block-menu" role="navigation">
+ *   <h2 class="block-title">Contact Management</h2>
+ *     <ul class="menu">
+ *       <li class="menu__item"><a href="#">Dashboard</a></li>
+ *       <li class="menu__item"><a href="#">Contacts</a></li>
+ *       <li class="menu__item"><a href="#">Reports</a></li>
+ *    </ul>
+ * </div>
+ * 
+ * @variables:
+ * $st-menu-style: The style for the drop down menu. Defaults to bottom. Possible values:
+ * - up: make the menu go up
+ * - down: make the menu go down
+ * $st-menu-justify: The justification for the drop down menu. Defaults to full. Possible values:
+ * - left: justify the menu to the left
+ * - right: justify the menu to the right
+ * - full: expand menu items to the full width of the triggering element
+ * $st-menu-trigger-selector: identifies the element that triggers the drop down. Defaults to 'H2.pane-title, H2.block-title'.
+ * $st-menu-trigger-style: CSS style to apply to selectors. Defaults to false.
+ * $st-menu-menu-selector: identifies the container for the menu itself. Defaults to UL.menu.
+ * $st-menu-element-selector: the selector for each element in the menu. Defaults to LI.
+ * $st-menu-include-transitions: whether or not to apply CSS transitions to the menu. Defaults to true.
+ * $st-menu-border: apply this value as a border when menus display. Defaults to false.
+ * $st-menu-border-radius: apply this as the border radius to menus when they display. Defaults to false.
+ * $st-menu-border-shadow: apply this value as the shadow for menus when they display. Defaults to false.
+ * 
+ */ 
+@mixin ao-drop-down (
+  $st-menu-style: $st-menu-style,
+  $st-menu-justify: $st-menu-justify,
+  $st-menu-trigger-selector: $st-menu-trigger-selector,
+  $st-menu-trigger-style: $st-menu-trigger-style,
+  $st-menu-menu-selector: $st-menu-menu-selector,
+  $st-menu-menu-style: $st-menu-menu-style,
+  $st-menu-element-selector: $st-menu-element-selector,
+  $st-menu-element-style: $st-menu-element-style,
+  $st-menu-include-transitions: $st-menu-include-transitions,
+  $st-menu-border: $st-menu-border,
+  $st-menu-border-radius: $st-menu-border-radius,
+  $st-menu-border-shadow: $st-menu-border-shadow,
+  $st-menu-top-offset: $st-menu-top-offset
+) {
+  
+  // default states
+  position: relative;
+  
+  #{$st-menu-trigger-selector} {
+    // default style for triggers
+    @if $st-menu-trigger-style != false {
+      @extend #{$st-menu-trigger-style};
+    }
+    @if $st-menu-include-transitions == true {
+      @include ao-transition();
+    }
+  }
+  #{$st-menu-menu-selector} {
+  
+    // hide the menu
+    display: none;
+    position: absolute;
+
+    // default style for menus
+    @if $st-menu-menu-style != false {
+      @extend #{$st-menu-menu-style};
+    }
+    @if $st-menu-include-transitions == true {
+      @include ao-transition();
+    }
+    @if $st-menu-border != false {
+      @include border($st-menu-border);
+    }
+    @if $st-menu-border-radius != false {
+      @include border-radius($st-menu-border-radius);
+    }
+    @if $st-menu-border-shadow != false {
+      @include box-shadow($st-menu-border-shadow);
+    }
+    
+    // menu placement
+    // this is where up, down should be applied
+    @if $st-menu-style == up {
+      bottom: 100%;
+    }
+    @if $st-menu-style == down {
+      top: $st-menu-top-offset;
+    }
+    // this is where left, right and full should be applied
+    @if $st-menu-justify == left or $st-menu-justify == full { 
+      left: 0px;
+    }
+    @if $st-menu-justify == right { 
+      right: 0px;
+    }
+    @if $st-menu-justify == full { 
+      min-width: 100%; 
+    }
+    
+    #{$st-menu-element-selector} {
+      // default style for elements
+      @if $st-menu-element-style != false {
+        @extend #{$st-menu-element-style};
+      }
+    }
+  }
+  
+  // the hover gets applied to the containing element, not the trigger
+  // this allows us to do things like make block titles into triggers for menus
+  &:hover {
+    #{$st-menu-menu-selector} {
+      display: block;
+    }
+  }
+} 
+ 

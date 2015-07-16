@@ -21,6 +21,7 @@
  * Create distinct mixins for handing layouts within your themes.
  * A layout should provide styles that control the placement of elements.
  * A layout can also include media queries that transform the way information displays at different resolutions.
+ * Comment out any partials you don't plan to use.
  */
 @import "layouts/regions";
 @import "layouts/grids";
@@ -30,8 +31,11 @@
 /*
  * Create distinct mixins for individual page elements. Group them into component files based on common styles in the theme.
  * DO NOT add your components to components/misc, it's not a good way to organize your code.
+ * Comment out any partials you don't plan to use.
  */
 @import "components/misc";
+@import "components/form-item";
+@import "components/menus";
 
 @import "print";
 

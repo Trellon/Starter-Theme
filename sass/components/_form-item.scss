@@ -1,0 +1,177 @@
+/**
+ * @file
+ * Forms
+ *
+ * Defines the appearance of form items.
+ */
+
+/**
+ * DEFAULT VARIABLES
+ * Default settings for regions.
+ * See mixin documentation for explanations.
+ */
+$st-form-item-padding:            false !default;
+$st-form-item-margin:             false !default;
+$st-form-item-border:             false !default;
+$st-form-item-background:         false !default;
+$st-form-item-width:              false !default;
+$st-form-item-position:           false !default;
+$st-form-item-label-padding:      false !default;
+$st-form-item-label-selector:     LABEL !default;
+$st-form-item-label-margin:       false !default;
+$st-form-item-label-border:       false !default;
+$st-form-item-label-background:   false !default;
+$st-form-item-label-width:        false !default;
+$st-form-item-label-position:     false !default;
+$st-form-item-element-selector:   INPUT !default;
+$st-form-item-element-padding:    false !default;
+$st-form-item-element-margin:     false !default;
+$st-form-item-element-background: false !default;
+$st-form-item-element-border:     false !default;
+$st-form-item-element-width:      false !default;
+$st-form-item-desc-selector:      '.description' !default;
+$st-form-item-desc-padding:       false !default;
+$st-form-item-desc-margin:        false !default;
+$st-form-item-desc-background:    false !default;
+$st-form-item-desc-border:        false !default;
+$st-form-item-desc-width:         false !default;
+$st-form-item-desc-position:      false !default;
+
+/**
+ * ST FORM ITEM
+ *
+ * Themes form items.
+ * Put these together into a style for a form to handle different displays.
+ *
+ * $st-form-item-padding: Defines the padding of the form item. Set to false to ignore. Defaults to false.
+ * $st-form-item-border: Defines the border surrounding the form item. Set to false to ignore. Defaults to false.
+ * $st-form-item-width: Defines the width of the form item. Set to false to ignore. Defaults to false.
+ * $st-form-item-label-width: Defines the width of the label. Set to false to ignore. Defaults to false.
+ * $st-form-item-label-position: Positions the label. Set to false to ignore. Defaults to false.
+ * $st-form-item-element-width: Defines the width of the element. Set to false to ignore. Defaults to false.
+ *
+ */
+@mixin ao-form-item (
+
+  $st-form-item-padding: $st-form-item-padding,
+  $st-form-item-margin: $st-form-item-margin,
+  $st-form-item-border: $st-form-item-border,
+  $st-form-item-background: $st-form-item-background,
+  $st-form-item-width: $st-form-item-width,
+  $st-form-item-position: $st-form-item-position,
+  $st-form-item-label-selector: $st-form-item-label-selector,
+  $st-form-item-label-padding: $st-form-item-label-padding,
+  $st-form-item-label-margin: $st-form-item-label-margin,
+  $st-form-item-label-border: $st-form-item-label-border,
+  $st-form-item-label-width: $st-form-item-label-width,
+  $st-form-item-label-position: $st-form-item-label-position,
+  $st-form-item-element-selector:  $st-form-item-element-selector,
+  $st-form-item-element-padding:  $st-form-item-element-padding,
+  $st-form-item-element-margin:  $st-form-item-element-margin,
+  $st-form-item-element-border:  $st-form-item-element-border,
+  $st-form-item-element-width:  $st-form-item-element-width,
+  $st-form-item-desc-selector:  $st-form-item-desc-selector,
+  $st-form-item-desc-padding:  $st-form-item-desc-padding,
+  $st-form-item-desc-margin:  $st-form-item-desc-margin,
+  $st-form-item-desc-border:  $st-form-item-desc-border,
+  $st-form-item-desc-width:  $st-form-item-desc-width,
+  $st-form-item-desc-position: $st-form-item-desc-position
+
+){
+
+  // theme the form item
+  @if $st-form-item-padding != false {
+    padding: $st-form-item-padding;
+  }
+  @if $st-form-item-margin != false {
+    margin: $st-form-item-margin;
+  }
+  @if $st-form-item-border != false {
+    border: $st-form-item-border;
+  }
+  @if $st-form-item-background != false {
+    background: $st-form-item-background;
+  }
+  @if $st-form-item-width != false {
+    width: $st-form-item-width;
+  }
+  @if $st-form-item-position != false {
+    position: $st-form-item-position;
+  }
+  
+  // theme the label
+  @if $st-form-item-label-selector != false {
+    #{$st-form-item-label-selector} {
+      @if $st-form-item-label-padding != false {
+        padding: $st-form-item-label-padding;
+      }
+      @if $st-form-item-label-margin != false {
+        margin: $st-form-item-label-margin;
+      }
+      @if $st-form-item-label-border != false {
+        border: $st-form-item-label-border;
+      }
+      @if $st-form-item-label-background != false {
+        background: $st-form-item-label-background;
+      }
+      @if $st-form-item-label-width != false {
+        width: $st-form-item-label-width;
+      }
+      @if $st-form-item-label-position != false {
+        // here's where we place the label
+        // possible values: above, left, right
+      }
+    }
+  }
+  
+  // theme the element
+  @if $st-form-item-element-selector != false {
+    #{$st-form-item-element-selector} {
+      @if $st-form-item-element-padding != false {
+        padding: $st-form-item-element-padding;
+      }
+      @if $st-form-item-element-margin != false {
+        margin: $st-form-item-element-margin;
+      }
+      @if $st-form-item-element-border != false {
+        border: $st-form-item-element-border;
+      }
+      @if $st-form-item-element-background != false {
+        background: $st-form-item-element-background;
+      }
+      @if $st-form-item-element-width != false {
+        width: $st-form-item-element-width;
+      }
+      @if $st-form-item-label-position != false {
+        // here's where we place the element
+        // possible values: above, left, right
+        // the element gets placed when the label gets placed to the left or the right
+      }
+    }
+  }
+  
+  // theme the description
+  @if $st-form-item-desc-selector != false {
+    #{$st-form-item-desc-selector} {
+      @if $st-form-item-desc-padding != false {
+        padding: $st-form-item-desc-padding;
+      }
+      @if $st-form-item-desc-margin != false {
+        margin: $st-form-item-desc-margin;
+      }
+      @if $st-form-item-desc-border != false {
+        border: $st-form-item-desc-border;
+      }
+      @if $st-form-item-desc-background != false {
+        border: $st-form-item-desc-background;
+      }
+      @if $st-form-item-desc-width != false {
+        width: $st-form-item-desc-width;
+      }
+      @if $st-form-item-desc-position != false {
+        // here's where we place the description
+        // possible values: above, left, right
+      }
+    }
+  }
+}
