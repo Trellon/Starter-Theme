@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Hamburger Menu.
+ *
+ * Applies a default set of styles to hamburger menus.
+ */
+#{$st-hamburger-selector} {
+  @include st-hamburger();  
+}

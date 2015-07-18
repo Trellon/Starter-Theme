@@ -6,12 +6,13 @@
  */
  
 /* DEFAULT VARIABLES */
+$st-node-selector:                'article.node' !default;
 $st-node-margin:                  false;
 $st-node-padding:                 false !default;
 $st-node-background-color:   false !default;
-$st-node-title-selector:          H2.node-title !default;
+$st-node-title-selector:          'H2.node-title' !default;
 $st-node-title-font-style:        false !default;
-$st-node-link-selector:           div.links !default;
+$st-node-link-selector:           'div.links' !default;
 $st-node-link-padding:            false  !default;
 $st-node-link-margin:             false !default;
 

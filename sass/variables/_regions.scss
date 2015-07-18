@@ -19,6 +19,17 @@ $rc-region-selector:        "header#header, section#above-content-one, section#a
 $rc-region-inner-selector:  "div.section-wrapper"; 
 
 /**
+ * This variable selects the header associated with the page.
+ */ 
+$rc-region-header-selector:  "header#header"; 
+
+/**
+ * This variable selects the header associated with the page.
+ */ 
+$rc-region-footer-selector:  "footer#footer"; 
+
+
+/**
  * Region layouts.
  */ 
 

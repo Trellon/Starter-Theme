@@ -5,8 +5,25 @@
  * This file demonstrates how to organize code used in the theme.
  * If the layouts and components are all mixins, this should give complete control over how styles are applied.
  * Create partials to thematically organize the styles that are being applied.
- *
+ * Feel free to copy this file and rename it to something corresponding to the theme. Comment out any files you don't need, and add any files you do.
  */
  
+// Body
+@import "body";
+
 // Regions
 @import "regions";
+
+// Header
+@import "header";
+
+// Footer
+@import "footer";
+
+// Nodes
+@import "nodes";
+
+// Hamburger Menu
+@import "hamburger";
+
+

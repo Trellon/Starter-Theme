@@ -45,6 +45,12 @@
  * This variable selects all of the inner selectors for the horizontal regions specified above.
  */
 /**
+ * This variable selects the header associated with the page.
+ */
+/**
+ * This variable selects the header associated with the page.
+ */
+/**
  * Region layouts.
  */
 /**
@@ -1734,27 +1740,33 @@ tr.selected td {
 
 /**
  * @file
- * Forms
+ * Body
  *
- * Defines the appearance of form items.
+ * Mixin for defining styles related to the body tag.
+ * Fonts and font styles are defined in _normalize.scss. This mixin is for setting anything else related to the body.
+ */
+/* DEFAULT VARIABLES */
+/**
+ * ST BODY
  */
 /**
- * DEFAULT VARIABLES
- * Default settings for regions.
- * See mixin documentation for explanations.
+ * @file
+ * Header
+ *
+ * Mixin for defining styles in the header
+ */
+/* DEFAULT VARIABLES */
+/**
+ *
  */
 /**
- * ST FORM ITEM
+ * @file
+ * Footer
  *
- * Themes form items.
- * Put these together into a style for a form to handle different displays.
- *
- * $st-form-item-padding: Defines the padding of the form item. Set to false to ignore. Defaults to false.
- * $st-form-item-border: Defines the border surrounding the form item. Set to false to ignore. Defaults to false.
- * $st-form-item-width: Defines the width of the form item. Set to false to ignore. Defaults to false.
- * $st-form-item-label-width: Defines the width of the label. Set to false to ignore. Defaults to false.
- * $st-form-item-label-position: Positions the label. Set to false to ignore. Defaults to false.
- * $st-form-item-element-width: Defines the width of the element. Set to false to ignore. Defaults to false.
+ * Mixin for defining styles in the footer
+ */
+/* DEFAULT VARIABLES */
+/**
  *
  */
 /**
@@ -1810,6 +1822,51 @@ tr.selected td {
  * $st-menu-border-radius: apply this as the border radius to menus when they display. Defaults to false.
  * $st-menu-border-shadow: apply this value as the shadow for menus when they display. Defaults to false.
  * 
+ */
+/**
+ * @file
+ * Node
+ *
+ * Mixin for defining styles in the node
+ */
+/* DEFAULT VARIABLES */
+/**
+ * ST NODE
+ */
+/**
+ * @file
+ * Forms
+ *
+ * Defines the appearance of form items.
+ */
+/**
+ * DEFAULT VARIABLES
+ * Default settings for regions.
+ * See mixin documentation for explanations.
+ */
+/**
+ * ST FORM ITEM
+ *
+ * Themes form items.
+ * Put these together into a style for a form to handle different displays.
+ *
+ * $st-form-item-padding: Defines the padding of the form item. Set to false to ignore. Defaults to false.
+ * $st-form-item-border: Defines the border surrounding the form item. Set to false to ignore. Defaults to false.
+ * $st-form-item-width: Defines the width of the form item. Set to false to ignore. Defaults to false.
+ * $st-form-item-label-width: Defines the width of the label. Set to false to ignore. Defaults to false.
+ * $st-form-item-label-position: Positions the label. Set to false to ignore. Defaults to false.
+ * $st-form-item-element-width: Defines the width of the element. Set to false to ignore. Defaults to false.
+ *
+ */
+/**
+ * @file
+ * Hamburger
+ *
+ * Mixin for defining styles for hamburger menus.
+ */
+/* DEFAULT VARIABLES */
+/**
+ * ST HAMBURGER
  */
 /**
  * @file
@@ -1897,7 +1954,13 @@ tr.selected td {
  * This file demonstrates how to organize code used in the theme.
  * If the layouts and components are all mixins, this should give complete control over how styles are applied.
  * Create partials to thematically organize the styles that are being applied.
+ * Feel free to copy this file and rename it to something corresponding to the theme. Comment out any files you don't need, and add any files you do.
+ */
+/**
+ * @file
+ * Body.
  *
+ * Applies a default set of styles to the body.
  */
 /**
  * @file
@@ -1941,5 +2004,35 @@ tr.selected td {
       padding: 0em;
       width: 960px;
       max-width: 960px; } }
+
+/**
+ * @file
+ * Header.
+ *
+ * Applies a default set of styles to the header.
+ */
+/* line 6, /Volumes/2 TB - First Disk/htdocs/tmp/starter-theme/sass/themes/_header.scss */
+header#header {
+  background-color: #FFF; }
+
+/**
+ * @file
+ * Footer.
+ *
+ * Applies a default set of styles to the footer.
+ */
+/**
+ * @file
+ * Nodes.
+ *
+ * Applies a default set of styles to nodes in the theme.
+ * The default value for $st-node-selector is article.node. Feel free to adapt this to apply to individual node types.
+ */
+/**
+ * @file
+ * Hamburger Menu.
+ *
+ * Applies a default set of styles to hamburger menus.
+ */
 
 /*# sourceMappingURL=styles.css.map */

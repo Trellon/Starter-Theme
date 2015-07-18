@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Header.
+ *
+ * Applies a default set of styles to the header.
+ */
+#{$rc-region-header-selector} {
+  @include st-header();
+}

@@ -1,0 +1,49 @@
+/**
+ * @file
+ * Body
+ *
+ * Mixin for defining styles related to the body tag.
+ * Fonts and font styles are defined in _normalize.scss. This mixin is for setting anything else related to the body.
+ */
+ 
+/* DEFAULT VARIABLES */
+$st-body-margin:                      false !default;
+$st-body-padding:                     false !default;
+$st-body-background-color:       false !default;
+$st-body-background-image:      false !default;
+$st-body-background-repeat:     false !default;
+$st-body-background-position:   false !default;
+
+/**
+ * ST BODY
+ */
+@mixin st-body (
+  $st-body-margin: $st-body-margin,
+  $st-body-padding: $st-body-padding,
+  $st-body-background-color: $st-body-background-color,
+  $st-body-background-image: $st-body-background-image,
+  $st-body-background-repeat: $st-body-background-repeat,
+  $st-body-background-position: $st-body-background-position
+) {
+  
+  @if $st-body-margin != false {
+    margin: $st-body-margin;
+  }
+  @if $st-body-padding != false {
+    padding: $st-body-padding;
+  }
+  @if $st-body-background-color != false {
+    background-color: $st-body-background-color;
+  }
+  @if $st-body-background-image != false {
+    background-image: $st-body-background-image;
+  }
+  @if $st-body-background-repeat != false {
+    background-repeat: $st-body-background-repeat;
+  }
+  @if $st-body-background-position != false {
+    background-position: $st-body-background-position;
+  }
+
+}  
+ 

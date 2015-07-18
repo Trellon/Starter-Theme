@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Body.
+ *
+ * Applies a default set of styles to the body.
+ */
+BODY {
+  @include st-body();  
+}

@@ -34,8 +34,13 @@
  * Comment out any partials you don't plan to use.
  */
 @import "components/misc";
-@import "components/form-item";
+@import "components/body";
+@import "components/header";
+@import "components/footer";
 @import "components/menus";
+@import "components/node";
+@import "components/form-item";
+@import "components/hamburger";
 
 @import "print";
 

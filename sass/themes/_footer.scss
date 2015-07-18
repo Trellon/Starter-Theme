@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Footer.
+ *
+ * Applies a default set of styles to the footer.
+ */
+#{$rc-region-footer-selector} {
+  @include st-footer();
+}
