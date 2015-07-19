@@ -1,0 +1,10 @@
+/**
+ * @file
+ * Nodes.
+ *
+ * Applies a default set of styles to nodes in the theme.
+ * The default value for $st-node-selector is article.node. Feel free to adapt this to apply to individual node types.
+ */
+#{$st-page-selector} {
+  @include st-page();
+}

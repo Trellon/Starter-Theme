@@ -1,0 +1,28 @@
+/**
+ * @file
+ * Page
+ *
+ * Mixin for defining page styles
+ */
+ 
+/* DEFAULT VARIABLES */
+$st-page-selector:                'BODY' !default;
+$st-page-title-selector:          'H1.page__title' !default;
+$st-page-title-style:             'page-title' !default;
+
+/**
+ * ST PAGE
+ */
+@mixin st-page (
+  $st-page-title-selector: $st-page-title-selector,
+  $st-page-title-style: $st-page-title-style
+) {
+
+  @if $st-page-title-selector != false {
+    #{$st-page-title-selector} {
+      @include fontography($st-page-title-style);
+    }
+  }
+
+}  
+ 

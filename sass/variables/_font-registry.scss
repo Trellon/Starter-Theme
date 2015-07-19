@@ -17,7 +17,70 @@
   $fonto-style-family: $sans
 );
 
+/* TYPE */ 
+@include fontography-register-style(
+  $fonto-style-name:  'H1-style',
+  $fonto-style-color:  $black,
+  $fonto-style-size:   $h1-font-size,
+  $fonto-style-weight: 700,
+  $fonto-style-lines:  1,
+  $fonto-style-family: $sans,
+  $fonto-style-margin: 0em
+);
+@include fontography-register-style(
+  $fonto-style-name:  'H2-style',
+  $fonto-style-color:  $black,
+  $fonto-style-size:   $h2-font-size,
+  $fonto-style-weight: 700,
+  $fonto-style-lines:  1,
+  $fonto-style-family: $sans,
+  $fonto-style-margin: 0em
+);
+@include fontography-register-style(
+  $fonto-style-name:  'H3-style',
+  $fonto-style-color:  $black,
+  $fonto-style-size:   $h3-font-size,
+  $fonto-style-weight: 700,
+  $fonto-style-lines:  1,
+  $fonto-style-family: $sans
+);
+@include fontography-register-style(
+  $fonto-style-name:  'H4-style',
+  $fonto-style-color:  $black,
+  $fonto-style-size:   $h3-font-size,
+  $fonto-style-weight: 700,
+  $fonto-style-lines:  1,
+  $fonto-style-family: $sans
+);
+@include fontography-register-style(
+  $fonto-style-name:  'H5-style',
+  $fonto-style-color:  $black,
+  $fonto-style-size:   $h3-font-size,
+  $fonto-style-weight: 700,
+  $fonto-style-lines:  1,
+  $fonto-style-family: $sans
+);
+@include fontography-register-style(
+  $fonto-style-name:  'H6-style',
+  $fonto-style-color:  $black,
+  $fonto-style-size:   $h3-font-size,
+  $fonto-style-weight: 700,
+  $fonto-style-lines:  1,
+  $fonto-style-family: $sans
+);
+ 
 /**
  * Other font styles go here. Organize them thematically, i.e. header, nodes, comments, etc.
  */
+/* PAGES */ 
+@include fontography-register-style(
+  $fonto-style-name:  'page-title',
+  $fonto-style-color:  $black
+);
+ 
+/* NODES */ 
+@include fontography-register-style(
+  $fonto-style-name:  'node-title',
+  $fonto-style-color:  $black
+);
  
