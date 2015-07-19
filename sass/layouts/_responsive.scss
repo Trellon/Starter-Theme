@@ -30,7 +30,7 @@ $zen-auto-include-grid-item-base: false;
  * For screen sizes larger than 1200px, prevent excessively long lines of text
  * by setting a max-width.
  */
-#page,
+#{$rc-region-selector},
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
@@ -82,6 +82,7 @@ $zen-auto-include-grid-item-base: false;
 @include breakpoint($bp-tablets-up) {
 
   $zen-column-count: 3;
+  $zen-columns: 3;
 
   /**
    * The layout when there is only one sidebar, the left one.
@@ -161,6 +162,7 @@ $zen-auto-include-grid-item-base: false;
 @include breakpoint($bp-desktops) {
   
   $zen-column-count: 5;
+  $zen-columns: 5;
 
   /**
    * The layout when there is only one sidebar, the left one.

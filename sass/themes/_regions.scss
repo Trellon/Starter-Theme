@@ -32,11 +32,15 @@
 
 // Wide Desktops
 @include breakpoint($bp-desktops) {
+  
+  $rc-region-padding: 0em;  
+  $rc-region-margin: 0em auto;  
+  
   // Makes inner selectors 100% width and removes all padding
   #{$rc-region-selector}{
     @include  region-controller (
-      $rc-region-inner-padding:   $rc-region-inner-padding,
-      $rc-region-inner-margin:    $rc-region-inner-margin,
+      $rc-region-padding:   $rc-region-padding,
+      $rc-region-margin:    $rc-region-margin,
       $rc-region-inner-width:     960px
     );
   }

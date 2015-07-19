@@ -11,7 +11,7 @@
 /**
  * This variable selects all of the horizontal regions in a theme. Use it to apply styles to all of the ones appearing on the page, all at once.
  */ 
-$rc-region-selector:        "header#header, section#above-content-one, section#above-content-two, section#above-content-three, section#main, section#below-content-one, section#below-content-two, section#below-content-three, footer#footer"; 
+$rc-region-selector:        "section#main-navigation, header#header, section#above-content-one, section#above-content-two, section#above-content-three, section#main, section#below-content-one, section#below-content-two, section#below-content-three, footer#footer"; 
 
 /**
  * This variable selects all of the inner selectors for the horizontal regions specified above.
