@@ -17,13 +17,14 @@
  */
  
 /* DEFAULT VARIABLES */ 
-$rc-region-selector:        "" !default; 
-$rc-region-padding:         0em !default; 
-$rc-region-margin:          0em !default; 
-$rc-region-inner-selector:  "" !default; 
-$rc-region-inner-padding:   0em !default; 
-$rc-region-inner-margin:    0em auto !default; 
-$rc-region-inner-width:     100% !default; 
+$rc-region-selector:              "" !default; 
+$rc-region-padding:               0em !default; 
+$rc-region-margin:                0em !default; 
+$rc-region-inner-selector:      "" !default; 
+$rc-region-inner-padding:       0em !default; 
+$rc-region-inner-margin:        0em auto !default; 
+$rc-region-inner-width:           100% !default; 
+$rc-region-inner-max-width:   100% !default; 
  
 /**
  * REGION CONTROLLER
@@ -46,7 +47,8 @@ $rc-region-inner-width:     100% !default;
   $rc-region-inner-selector:  $rc-region-inner-selector,
   $rc-region-inner-padding:   $rc-region-inner-padding,
   $rc-region-inner-margin:    $rc-region-inner-margin,
-  $rc-region-inner-width:     $rc-region-inner-width
+  $rc-region-inner-width:     $rc-region-inner-width,
+  $rc-region-inner-max-width:     $rc-region-inner-max-width
 ) {
 
   margin:   $rc-region-margin;
@@ -56,7 +58,7 @@ $rc-region-inner-width:     100% !default;
     margin:     $rc-region-inner-margin;
     padding:    $rc-region-inner-padding;
     width:      $rc-region-inner-width;
-    max-width:  $rc-region-inner-width; // never go beyond the inner selector
+    max-width:  $rc-region-inner-max-width; // never go beyond the inner selector
   }
 
 } 
