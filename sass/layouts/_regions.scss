@@ -17,14 +17,15 @@
  */
  
 /* DEFAULT VARIABLES */ 
-$rc-region-selector:              "" !default; 
-$rc-region-padding:               0em !default; 
-$rc-region-margin:                0em !default; 
+$rc-region-selector:            "" !default; 
+$rc-region-padding:             0em !default; 
+$rc-region-margin:              0em !default; 
 $rc-region-inner-selector:      "" !default; 
+$rc-region-inner-position:      relative !default; 
 $rc-region-inner-padding:       0em !default; 
 $rc-region-inner-margin:        0em auto !default; 
-$rc-region-inner-width:           100% !default; 
-$rc-region-inner-max-width:   100% !default; 
+$rc-region-inner-width:         100% !default; 
+$rc-region-inner-max-width:     100% !default; 
  
 /**
  * REGION CONTROLLER
@@ -45,6 +46,7 @@ $rc-region-inner-max-width:   100% !default;
   $rc-region-padding:         $rc-region-padding,
   $rc-region-margin:          $rc-region-margin,
   $rc-region-inner-selector:  $rc-region-inner-selector,
+  $rc-region-inner-position:  $rc-region-inner-position,
   $rc-region-inner-padding:   $rc-region-inner-padding,
   $rc-region-inner-margin:    $rc-region-inner-margin,
   $rc-region-inner-width:     $rc-region-inner-width,
@@ -59,6 +61,8 @@ $rc-region-inner-max-width:   100% !default;
     padding:    $rc-region-inner-padding;
     width:      $rc-region-inner-width;
     max-width:  $rc-region-inner-max-width; // never go beyond the inner selector
+    position: $rc-region-inner-position;
+    @include box-sizing(border-box);
   }
 
 } 
