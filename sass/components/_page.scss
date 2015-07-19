@@ -7,22 +7,51 @@
  
 /* DEFAULT VARIABLES */
 $st-page-selector:                'BODY' !default;
+$st-page-margin:                  false !default;
+$st-page-padding:                 false !default;
 $st-page-title-selector:          'H1.page__title' !default;
 $st-page-title-style:             'page-title' !default;
+$st-page-content-selector:        $rc-region-content-selector !default;
+$st-page-content-padding:         false !default;
+$st-page-content-margin:          false !default;
 
 /**
  * ST PAGE
  */
 @mixin st-page (
+  $st-page-margin: $st-page-margin,
+  $st-page-padding: $st-page-padding,
   $st-page-title-selector: $st-page-title-selector,
-  $st-page-title-style: $st-page-title-style
+  $st-page-title-style: $st-page-title-style,
+  $st-page-content-selector: $st-page-content-selector,
+  $st-page-content-padding: $st-page-content-padding,
+  $st-page-content-margin: $st-page-content-margin
 ) {
 
+  @if $st-page-margin != false {
+    margin: $st-page-margin;
+  }
+  @if $st-page-margin != false {
+    padding: $st-page-padding;
+  }
+
+  // titles
   @if $st-page-title-selector != false {
     #{$st-page-title-selector} {
       @include fontography($st-page-title-style);
     }
   }
 
+  // content 
+  @if $st-page-content-selector != false {
+    #{$st-page-content-selector}{
+      @if $st-page-content-margin != false {
+        margin: $st-page-content-margin;
+      }
+      @if $st-page-content-padding != false {
+        padding: $st-page-content-padding;
+      }
+    }
+  }
 }  
  
