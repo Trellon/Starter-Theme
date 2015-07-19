@@ -6,28 +6,65 @@
  */
  
 /* DEFAULT VARIABLES */
-$st-header-margin:                  false;
+$st-header-width:                   false !default;
+$st-header-margin:                  false !default;
 $st-header-padding:                 false !default;
-$st-header-background-color:   false !default;
+$st-header-border-top:              false !default;
+$st-header-border-bottom:           false !default;
+$st-header-border-left:             false !default;
+$st-header-border-right:            false !default;
+$st-header-background-color:        false !default;
+$st-header-inner-selector:          'div.section-wrapper';
+$st-header-inner-selector-width:    false !default;
 
 /**
  *
  */
 @mixin st-header (
+  $st-header-width: $st-header-width,
   $st-header-margin: $st-header-margin,
   $st-header-padding: $st-header-padding,
-  $st-header-background-color: $st-header-background-color
+  $st-header-border-top: $st-header-border-top,
+  $st-header-border-bottom: $st-header-border-bottom,
+  $st-header-border-left: $st-header-border-left,
+  $st-header-border-right: $st-header-border-right,
+  $st-header-background-color: $st-header-background-color,
+  $st-header-inner-selector: $st-header-inner-selector,
+  $st-header-inner-selector-width: $st-header-inner-selector-width
 ) {
   
+  @if $st-header-width != false {
+    width: $st-header-width;
+    max-width: $st-header-width;
+  }
   @if $st-header-margin != false {
     margin: $st-header-margin;
   }
   @if $st-header-padding != false {
     padding: $st-header-padding;
   }
+  @if $st-header-border-top != false {
+    border-top: $st-header-border-top;
+  }
+  @if $st-header-border-bottom != false {
+    border-bottom: $st-header-border-bottom;
+  }
+  @if $st-header-border-left != false {
+    border-left: $st-header-border-left;
+  }
+  @if $st-header-border-right != false {
+    border-right: $st-header-border-right;
+  }
   @if $st-header-background-color != false {
     background-color: $st-header-background-color;
   }
+  @if $st-header-inner-selector != false {
+    #{$st-header-inner-selector}{
+      @if $st-header-inner-selector-width != false {
+        width: $st-header-inner-selector-width;
+      }
+    }
+  }
 
 }  
- 
+

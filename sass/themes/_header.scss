@@ -5,5 +5,8 @@
  * Applies a default set of styles to the header.
  */
 #{$rc-region-header-selector} {
-  @include st-header();
+  @include st-header(
+    $st-header-width: 100%,
+    $st-header-inner-selector-width: 100%
+  );
 }

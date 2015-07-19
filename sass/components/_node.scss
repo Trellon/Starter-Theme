@@ -9,9 +9,17 @@
 $st-node-selector:                'article.node' !default;
 $st-node-margin:                  false;
 $st-node-padding:                 false !default;
-$st-node-background-color:   false !default;
+$st-node-border-top:              false !default;
+$st-node-border-bottom:           false !default;
+$st-node-border-left:             false !default;
+$st-node-border-right:            false !default;
+$st-node-background-color:        false !default;
 $st-node-title-selector:          'H2.node-title' !default;
-$st-node-title-font-style:        false !default;
+$st-node-title-font-style:        node-title !default;
+$st-node-title-border-top:        false !default;
+$st-node-title-border-bottom:     false !default;
+$st-node-title-border-left:       false !default;
+$st-node-title-border-right:      false !default;
 $st-node-link-selector:           'div.links' !default;
 $st-node-link-padding:            false  !default;
 $st-node-link-margin:             false !default;
@@ -22,6 +30,10 @@ $st-node-link-margin:             false !default;
 @mixin st-node (
   $st-node-margin: $st-node-margin,
   $st-node-padding: $st-node-padding,
+  $st-node-border-top: $st-node-border-top,
+  $st-node-border-bottom: $st-node-border-bottom,
+  $st-node-border-left: $st-node-border-left,
+  $st-node-border-right: $st-node-border-right,
   $st-node-background-color: $st-node-background-color,
   $st-node-title-selector: $st-node-title-selector,
   $st-node-title-font-style: $st-node-title-font-style,
@@ -30,7 +42,6 @@ $st-node-link-margin:             false !default;
   $st-node-link-margin: $st-node-link-margin
   
 ) {
-  
   @if $st-node-margin != false {
     margin: $st-node-margin;
   }
@@ -40,12 +51,36 @@ $st-node-link-margin:             false !default;
   @if $st-node-background-color != false {
     background-color: $st-node-background-color;
   }
+  @if $st-node-border-top != false {
+    border-top: $st-node-border-top;
+  }
+  @if $st-node-border-bottom != false {
+    border-bottom: $st-node-border-bottom;
+  }
+  @if $st-node-border-left != false {
+    border-left: $st-node-border-left;
+  }
+  @if $st-node-border-right != false {
+    border-right: $st-node-border-right;
+  }
   
   // node titles
   @if $st-node-title-selector != false {
     #{$st-node-title-selector}{
       @if $st-node-title-font-style != false {
         @include fontography($st-node-title-font-style);
+      }
+      @if $st-node-title-border-top != false {
+        border-top: $st-node-title-border-top;
+      }
+      @if $st-node-title-border-bottom != false {
+        border-top: $st-node-title-border-bottom;
+      }
+      @if $st-node-title-border-left != false {
+        border-top: $st-node-title-border-left;
+      }
+      @if $st-node-title-border-right != false {
+        border-top: $st-node-title-border-right;
       }
     }
   }
