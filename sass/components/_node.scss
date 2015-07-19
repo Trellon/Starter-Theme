@@ -74,13 +74,13 @@ $st-node-link-margin:             false !default;
         border-top: $st-node-title-border-top;
       }
       @if $st-node-title-border-bottom != false {
-        border-top: $st-node-title-border-bottom;
+        border-bottom: $st-node-title-border-bottom;
       }
       @if $st-node-title-border-left != false {
-        border-top: $st-node-title-border-left;
+        border-left: $st-node-title-border-left;
       }
       @if $st-node-title-border-right != false {
-        border-top: $st-node-title-border-right;
+        border-right: $st-node-title-border-right;
       }
     }
   }
