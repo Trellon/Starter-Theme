@@ -39,9 +39,12 @@
   // Makes inner selectors 100% width and removes all padding
   #{$rc-region-selector}{
     @include  region-controller (
-      $rc-region-padding:   $rc-region-padding,
-      $rc-region-margin:    $rc-region-margin,
-      $rc-region-inner-width:     960px
+      $rc-region-padding:         $rc-region-padding,
+      $rc-region-margin:          $rc-region-margin,
+      $rc-region-inner-padding:   0em rhythm(.25),
+      $rc-region-inner-margin:    0em auto,
+      $rc-region-inner-width:     100%,
+      $rc-region-inner-max-width: 1024px
     );
   }
 }
