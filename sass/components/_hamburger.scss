@@ -6,47 +6,228 @@
  */
  
 /* DEFAULT VARIABLES */
-$st-hamburger-selector:                      '.responsive-menus' !default;
-$st-hamburger-responsive-class:         '.responsified' !default;
+$st-hamburger-selector:               '.responsive-menus.responsified, .responsive-menus.responsified.responsive-toggled.absolute' !default;
+$st-hamburger-responsive-class:       '.responsified' !default;
+$st-hamburger-width:                  false !default;
+$st-hamburger-height:                 false !default;
+$st-hamburger-position:               right !default;
+$st-hamburger-top:                    0px !default;
+$st-hamburger-left:                   0px !default;
+$st-hamburger-right:                  0px !default;
 
-$st-hamburger-toggler-selector:           '.toggler' !default;
-$st-hamburger-toggler-font-style:        'normal' !default;
-$st-hamburger-toggler-padding:           rhythm(.25) !default;
-$st-hamburger-toggler-background:     false !default;
-$st-hamburger-toggler-border-radius:  rhythm(.25);
-$st-hamburger-toggler-box-shadow:    false !default;
+/* Toggler */
+$st-hamburger-toggler-selector:       'span.toggler' !default;
+$st-hamburger-toggler-font-style:     'normal' !default;
+$st-hamburger-toggler-width:          50px !default;
+$st-hamburger-toggler-height:         50px !default;
+$st-hamburger-toggler-padding:        0em !default;
+$st-hamburger-toggler-background:     none !default;
+$st-hamburger-toggler-border-radius:  0em !default;
+$st-hamburger-toggler-box-shadow:     none !default;
+$st-hamburger-toggler-border-top:     none !default;
+$st-hamburger-toggler-border-bottom:  none !default;
+$st-hamburger-toggler-border-left:    none !default;
+$st-hamburger-toggler-border-right:   none !default;
 
-$st-hamburger-menu-selector:         'nav.responsive-menus-simple' !default;
+/* Menu */
+$st-hamburger-menu-selector:          'nav.responsive-menus-simple' !default;
+$st-hamburger-menu-top:               0px !default;
+$st-hamburger-menu-left:              0px !default;
+$st-hamburger-menu-right:             0px !default;
+$st-hamburger-menu-padding:           rhythm(.25) !default;
+$st-hamburger-menu-background:        none none !default;
+$st-hamburger-menu-border-radius:     0em;
+$st-hamburger-menu-box-shadow:        none !default;
+$st-hamburger-menu-border-top:        none !default;
+$st-hamburger-menu-border-bottom:     none !default;
+$st-hamburger-menu-border-left:       none !default;
+$st-hamburger-menu-border-right:      none !default;
 
+/* Menu Item */
+$st-hamburger-menu-item-selector:       'UL > LI' !default;
+$st-hamburger-menu-item-link-selector:  'A' !default;
+$st-hamburger-menu-item-border-top:     none !default;
+$st-hamburger-menu-item-border-bottom:  none !default;
+$st-hamburger-menu-item-border-left:    none !default;
+$st-hamburger-menu-item-border-right:   none !default;
+$st-hamburger-menu-item-padding:        false !default;
+$st-hamburger-menu-item-margin:         false !default;
+
+$st-hamburger-menu-item-hover-color:    'normal' !default;
+$st-hamburger-menu-item-font-style:     'normal' !default;
 
 
 /**
  * ST HAMBURGER
+ * Styles a hamburger menu.
+ * 
+ * This mixin does several things:
+ * 1) It controls the placement of the toggler for the menu.
+ * 2) It controls the appearance of the menu.
+ * 3) It controls the appearance of menu items.
+ * 
+ * VARIABLES
+ * There are a lot of variables. This is broken into sections.
+ * 
+ * Selectors - these select elements that are part of the hamburger menu.
+ * 
+ * $st-hamburger-selector: Selects the hamburger menu itself. Not used in the mixin, but can be used to find it.
+ * $st-hamburger-responsive-class: Class attached to the hamburger menu when it is open.
+ * $st-hamburger-menu-selector: Selects the menu itself.
+ * $st-hamburger-menu-item-selector: Selects items appearing on the menu.
+ * $st-hamburger-menu-item-link-selector: Selects the link associated with menu items.
+ * 
+ * Hamburger - these affect the placement of the menu and the toggler.
+ * 
+ * $st-hamburger-width: Sets a width to the menu. Defaults to false.
+ * $st-hamburger-height: Sets a height to the menu. Defaults to false.
+ * $st-hamburger-position: Tells the mixin where to position the menu. Valid options are right and left. Defaults to right.
+ * $st-hamburger-top: Absolutely positioned, tells the mixin where to place the menu. Defaults to 0px.
+ * $st-hamburger-left: Absolutely positioned, tells the mixin where to place the menu. Only used with position = left. Defaults to 0px.
+ * $st-hamburger-right: Absolutely positioned, tells the mixin where to place the menu. Only used with position = right. Defaults to 0px.
+ * 
+ * Menu - these affect the menu itself.
+ * 
+ * $st-hamburger-menu-top: Vertical placement of the menu when triggered. Defaults to 0px.
+ * $st-hamburger-menu-left: Horizontal placement of the menu when triggered. Defaults to 0px.
+ * $st-hamburger-menu-right: Horizontal placement of the menu when triggered. Defaults to 0px.
+ * $st-hamburger-menu-padding: Padding for the menu. Defaults to rhythm(.25).
+ * $st-hamburger-menu-background: Background to apply to the menu.
+ * $st-hamburger-menu-background: Background to apply to the menu.
+ * $st-hamburger-menu-border-radius: Border radius to apply to the menu.
+ * $st-hamburger-menu-box-shadow: Shadow to apply to the menu.
+ * $st-hamburger-menu-border-top: Border to apply to the menu.
+ * $st-hamburger-menu-border-bottom:  Border to apply to the menu.
+ * $st-hamburger-menu-border-left:  Border to apply to the menu.
+ * $st-hamburger-menu-border-right:  Border to apply to the menu.
+ * 
+ * Menu Items - these affect the items appearing on the menu.
+ * 
+ * $st-hamburger-menu-item-border-top: Border for the menu item.
+ * $st-hamburger-menu-item-border-bottom: Border for the menu item.
+ * $st-hamburger-menu-item-border-left: Border for the menu item.
+ * $st-hamburger-menu-item-border-right: Border for the menu item.
+ * $st-hamburger-menu-item-padding: Padding for the menu item.
+ * $st-hamburger-menu-item-margin: Margin for the menu item.
+ * $st-hamburger-menu-item-hover-color: Hover color for the menu item.
+ * $st-hamburger-menu-item-font-style: Font styles for menu items.
+ *
  */
 @mixin st-hamburger (
 
+  $st-hamburger-width: $st-hamburger-width,
+  $st-hamburger-height: $st-hamburger-height,
   $st-hamburger-toggler-selector: $st-hamburger-toggler-selector,
   $st-hamburger-toggler-font-style: $st-hamburger-toggler-font-style,
+  $st-hamburger-toggler-width: $st-hamburger-toggler-width,
+  $st-hamburger-toggler-height: $st-hamburger-toggler-height,
+  $st-hamburger-position:  $st-hamburger-position,
   $st-hamburger-toggler-padding: $st-hamburger-toggler-padding,
   $st-hamburger-toggler-background: $st-hamburger-toggler-background,
   $st-hamburger-toggler-border-radius: $st-hamburger-toggler-border-radius,
-  $st-hamburger-toggler-box-shadow: $st-hamburger-toggler-box-shadow
-
-
+  $st-hamburger-toggler-box-shadow: $st-hamburger-toggler-box-shadow,
+  $st-hamburger-toggler-border-top: $st-hamburger-toggler-border-top,
+  $st-hamburger-toggler-border-bottom: $st-hamburger-toggler-border-bottom,
+  $st-hamburger-toggler-border-left: $st-hamburger-toggler-border-left,
+  $st-hamburger-toggler-border-right: $st-hamburger-toggler-border-right,
+  $st-hamburger-menu-padding: $st-hamburger-menu-padding,
+  $st-hamburger-menu-background: $st-hamburger-menu-background,
+  $st-hamburger-menu-border-radius: $st-hamburger-menu-border-radius,
+  $st-hamburger-menu-box-shadow: $st-hamburger-menu-box-shadow,
+  $st-hamburger-menu-border-top: $st-hamburger-menu-border-top,
+  $st-hamburger-menu-border-bottom: $st-hamburger-menu-border-bottom,
+  $st-hamburger-menu-border-left: $st-hamburger-menu-border-left,
+  $st-hamburger-menu-border-right: $st-hamburger-menu-border-right,
+  $st-hamburger-menu-item-selector: $st-hamburger-menu-item-selector,
+  $st-hamburger-menu-item-link-selector: $st-hamburger-menu-item-link-selector,
+  $st-hamburger-menu-item-border-top: $st-hamburger-menu-item-border-top,
+  $st-hamburger-menu-item-border-bottom: $st-hamburger-menu-item-border-bottom,
+  $st-hamburger-menu-item-border-left: $st-hamburger-menu-item-border-left,
+  $st-hamburger-menu-item-border-right: $st-hamburger-menu-item-border-right,
+  $st-hamburger-menu-item-hover-color: $st-hamburger-menu-item-hover-color,
+  $st-hamburger-menu-item-padding: $st-hamburger-menu-item-padding,
+  $st-hamburger-menu-item-margin: $st-hamburger-menu-item-margin,
+  $st-hamburger-menu-item-font-style: $st-hamburger-menu-item-font-style
 ) {
   
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  width: auto;  
+  display: inline-block;
   
+  @if $st-hamburger-width != false {
+    width: $st-hamburger-width;  
+  }
+  @if $st-hamburger-height != false {
+    height: $st-hamburger-height;  
+  }
+  
+  // positioning
+  @if $st-hamburger-position == right {
+    position: absolute;
+    top: $st-hamburger-top;
+    right: $st-hamburger-right;
+    text-align: right;
+    
+    #{$st-hamburger-toggler-selector}{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: auto;
+    }
+    #{$st-hamburger-menu-selector}{
+      position: absolute;
+      top: $st-hamburger-menu-top;
+      right: $st-hamburger-menu-right;
+      width: auto;
+    }
+  }
+  @if $st-hamburger-position == left {
+    position: absolute;
+    top: $st-hamburger-top;
+    left: $st-hamburger-left;
+    text-align: left;
+    
+    #{$st-hamburger-toggler-selector}{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: auto;
+    }
+    #{$st-hamburger-menu-selector}{
+      position: absolute;
+      top: $st-hamburger-menu-top;
+      left: $st-hamburger-menu-left;
+      width: auto;
+    }
+  } // end positioning
+    
+  
+  $st-hamburger-close: true;
+  
+  // close button
+  @if $st-hamburger-close == true {
+    #{$st-hamburger-menu-selector}:before {
+      // content: 'X';
+      // color: Red;
+      // text-align: right;
+    }
+  }
+    
+  
+  // toggler
   #{$st-hamburger-toggler-selector}{
-  
-    display: inline-block;
+    display: block;
     cursor: pointer;
     outline: none; 
+    position: absolute;
+    user-select: none;
+    outline: none;
+    @include box-sizing(border-box);
     
+    @if $st-hamburger-toggler-width != false {
+      width: $st-hamburger-toggler-width;  
+    }
+    @if $st-hamburger-toggler-height != false {
+      height: $st-hamburger-toggler-height;  
+    }
     @if $st-hamburger-toggler-font-style != false {
       @include fontography($st-hamburger-toggler-font-style);
     }
@@ -56,23 +237,100 @@ $st-hamburger-menu-selector:         'nav.responsive-menus-simple' !default;
     @if $st-hamburger-toggler-background != false {
       background: $st-hamburger-toggler-background;
     }
+    @if $st-hamburger-toggler-border-top != false {
+      border-top: $st-hamburger-toggler-border-top;
+    }
+    @if $st-hamburger-toggler-border-bottom != false {
+      border-bottom: $st-hamburger-toggler-border-bottom;
+    }
+    @if $st-hamburger-toggler-border-left != false {
+      border-left: $st-hamburger-toggler-border-left;
+    }
+    @if $st-hamburger-toggler-border-right != false {
+      border-right: $st-hamburger-toggler-border-right;
+    }
     @if $st-hamburger-toggler-border-radius != false {
       @include border-radius($st-hamburger-toggler-border-radius);
     }
     @if $st-hamburger-toggler-box-shadow != false {
       @include box-shadow($st-hamburger-toggler-box-shadow);
     }
-  }
+  } // end toggler
   
+  // menu
   #{$st-hamburger-menu-selector}{
     
-    display: none;
-    width: 100%;
-    background: #333;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    box-shadow: 2px 2px 2px #000;    
-  
+    position: absolute;
+    width: auto;
+    
+    @if $st-hamburger-menu-padding != false {
+      padding: $st-hamburger-menu-padding;
+    }
+    
+    @if $st-hamburger-menu-background != false {
+      background: $st-hamburger-menu-background;
+    }
+    
+    @if $st-hamburger-menu-border-radius != false {
+      @include border-radius($st-hamburger-menu-border-radius);
+    }
+    
+    @if $st-hamburger-menu-box-shadow != false {
+      @include box-shadow($st-hamburger-menu-box-shadow);
+    }
+    
+    @if $st-hamburger-menu-border-top != false {
+      border-top: $st-hamburger-menu-border-top;
+    }
+    @if $st-hamburger-menu-border-bottom != false {
+      border-bottom: $st-hamburger-menu-border-bottom;
+    }
+    @if $st-hamburger-menu-border-left != false {
+      border-left: $st-hamburger-menu-border-left;
+    }
+    @if $st-hamburger-menu-border-right != false {
+      border-right: $st-hamburger-menu-border-right;
+    }
+      
+    // menu item
+    @if $st-hamburger-menu-item-selector != false {
+    
+      #{$st-hamburger-menu-item-selector}{
+      
+        @include box-sizing(border-box);      
+      
+        @if $st-hamburger-menu-item-padding != false {
+          padding: $st-hamburger-menu-item-padding;
+        }
+        @if $st-hamburger-menu-item-padding != false {
+          margin: $st-hamburger-menu-item-margin;
+        }
+        @if $st-hamburger-menu-item-border-top != false {
+          border-top: $st-hamburger-menu-item-border-top;
+        }
+        @if $st-hamburger-menu-item-border-bottom != false {
+          border-bottom: $st-hamburger-menu-item-border-bottom;
+        }
+        @if $st-hamburger-menu-item-border-left != false {
+          border-left: $st-hamburger-menu-item-border-left;
+        }
+        @if $st-hamburger-menu-item-border-right != false {
+          border-right: $st-hamburger-menu-item-border-right;
+        }
+        @if $st-hamburger-menu-item-hover-color != false {
+          &:hover {
+            background-color: $st-hamburger-menu-item-hover-color;
+          }
+        }
+        @if $st-hamburger-menu-item-link-selector != false {
+          #{$st-hamburger-menu-item-link-selector}{
+            @include fontography($st-hamburger-menu-item-font-style);
+          }
+        }
+      }
+      
+    } // end menu item
+    
   }
   
 }  
