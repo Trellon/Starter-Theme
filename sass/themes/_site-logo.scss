@@ -4,6 +4,6 @@
  *
  * Controls the apperance of a site logo.
  */
-#{$st-hamburger-selector} {
-  @include st-hamburger();  
+#{$st-site-logo-selector-natural} {
+  @include st-site-logo();  
 }
