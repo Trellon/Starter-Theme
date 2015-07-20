@@ -86,6 +86,8 @@ $legacy-support-for-ie8: true;
 @import "compass/css3";
 // Helps set up a vertical rhythm.
 @import "compass/typography/vertical_rhythm";
+// User interface.
+@import "compass/css3/user-interface";
 
 // Add grid support
 // We are replacing the default zen grids with the new zen grids.

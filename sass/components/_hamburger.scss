@@ -45,17 +45,18 @@ $st-hamburger-menu-border-right:      none !default;
 
 /* Menu Item */
 $st-hamburger-menu-item-selector:       'UL > LI' !default;
-$st-hamburger-menu-item-link-selector:  'A' !default;
 $st-hamburger-menu-item-border-top:     none !default;
 $st-hamburger-menu-item-border-bottom:  none !default;
 $st-hamburger-menu-item-border-left:    none !default;
 $st-hamburger-menu-item-border-right:   none !default;
 $st-hamburger-menu-item-padding:        false !default;
 $st-hamburger-menu-item-margin:         false !default;
-
 $st-hamburger-menu-item-hover-color:    'normal' !default;
-$st-hamburger-menu-item-font-style:     'normal' !default;
 
+/* Menu Item Link */
+$st-hamburger-menu-item-font-style:     'normal' !default;
+$st-hamburger-menu-item-link-selector:  'A' !default;
+$st-hamburger-menu-item-link-padding:   0em !default;
 
 /**
  * ST HAMBURGER
@@ -130,6 +131,9 @@ $st-hamburger-menu-item-font-style:     'normal' !default;
   $st-hamburger-toggler-border-bottom: $st-hamburger-toggler-border-bottom,
   $st-hamburger-toggler-border-left: $st-hamburger-toggler-border-left,
   $st-hamburger-toggler-border-right: $st-hamburger-toggler-border-right,
+  $st-hamburger-menu-top: $st-hamburger-menu-top,
+  $st-hamburger-menu-left: $st-hamburger-menu-left,
+  $st-hamburger-menu-right: $st-hamburger-menu-right,
   $st-hamburger-menu-padding: $st-hamburger-menu-padding,
   $st-hamburger-menu-background: $st-hamburger-menu-background,
   $st-hamburger-menu-border-radius: $st-hamburger-menu-border-radius,
@@ -147,7 +151,8 @@ $st-hamburger-menu-item-font-style:     'normal' !default;
   $st-hamburger-menu-item-hover-color: $st-hamburger-menu-item-hover-color,
   $st-hamburger-menu-item-padding: $st-hamburger-menu-item-padding,
   $st-hamburger-menu-item-margin: $st-hamburger-menu-item-margin,
-  $st-hamburger-menu-item-font-style: $st-hamburger-menu-item-font-style
+  $st-hamburger-menu-item-font-style: $st-hamburger-menu-item-font-style,
+  $st-hamburger-menu-item-link-padding: $st-hamburger-menu-item-link-padding
 ) {
   
   display: inline-block;
@@ -218,7 +223,7 @@ $st-hamburger-menu-item-font-style:     'normal' !default;
     cursor: pointer;
     outline: none; 
     position: absolute;
-    user-select: none;
+    @include user-select(none);
     outline: none;
     @include box-sizing(border-box);
     
@@ -302,7 +307,7 @@ $st-hamburger-menu-item-font-style:     'normal' !default;
         @if $st-hamburger-menu-item-padding != false {
           padding: $st-hamburger-menu-item-padding;
         }
-        @if $st-hamburger-menu-item-padding != false {
+        @if $st-hamburger-menu-item-margin != false {
           margin: $st-hamburger-menu-item-margin;
         }
         @if $st-hamburger-menu-item-border-top != false {
@@ -322,11 +327,26 @@ $st-hamburger-menu-item-font-style:     'normal' !default;
             background-color: $st-hamburger-menu-item-hover-color;
           }
         }
+        
         @if $st-hamburger-menu-item-link-selector != false {
+        
           #{$st-hamburger-menu-item-link-selector}{
+          
             @include fontography($st-hamburger-menu-item-font-style);
+            
+            @if $st-hamburger-menu-item-link-padding != false {
+              padding: $st-hamburger-menu-item-link-padding;
+            }
+            
+            // setting this to none to complete the CSS override.
+            // @TODO: add border styles.
+            border: none;
+            
+            
           }
-        }
+          
+        } // end menu item link
+        
       }
       
     } // end menu item
