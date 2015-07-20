@@ -1,0 +1,56 @@
+/**
+ * @file
+ * Site Logo
+ *
+ * Controls the apperance of the site logo.
+ */
+ 
+/* DEFAULT VARIABLES */
+$st-site-logo-selector-enhanced:  '#site-logo' !default;
+$st-site-logo-selector-natural:   '#site-logo' !default;
+$st-site-logo-width:              false !default;
+$st-site-logo-height:             false !default;
+$st-site-logo-image:              false !default;
+$st-site-logo-image-svg:          false !default;
+
+/**
+ * ST SITE LOGO
+ * Controls the apperance of the site logo. Use this when you need to control the size of the logo provided by Drupal, or to
+ * place an svg variant of the logo on the page.
+ * 
+ * VARIABLES
+ * 
+ * Selectors - used to find the actual logo elements.
+ * 
+ * $st-site-logo-selector-enhanced:  Markup used to place a logo.
+ * $st-site-logo-selector-natural:   The default logo image provided by Drupal.
+ * 
+ * Size - used to control the size of the element.
+ * 
+ * $st-site-logo-width:      false !default;
+ * $st-site-logo-height:     false !default;
+ * 
+ * Image - used to control the appearance of the enhanced logo.
+ * 
+ * $st-site-logo-image:              false !default;
+ * $st-site-logo-image-svg:          false !default;
+ * 
+ */
+
+@mixin st-site-logo () {
+  @if $st-site-logo-height != false {
+    height: $st-site-logo-height;
+  }
+  @if $st-site-logo-width != false {
+    width: $st-site-logo-width;
+  }
+  @if $st-site-logo-image != false {
+    background-image: url($st-site-logo-image);
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @if $st-site-logo-image-svg != false {
+    background-image: url($st-site-logo-image-svg);
+  }
+}

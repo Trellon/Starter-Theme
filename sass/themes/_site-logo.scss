@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Site Logo.
+ *
+ * Controls the apperance of a site logo.
+ */
+#{$st-hamburger-selector} {
+  @include st-hamburger();  
+}
