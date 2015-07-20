@@ -37,7 +37,14 @@ $st-site-logo-image-svg:          false !default;
  * 
  */
 
-@mixin st-site-logo () {
+@mixin st-site-logo (
+
+  $st-site-logo-width: $st-site-logo-width,
+  $st-site-logo-height: $st-site-logo-height,
+  $st-site-logo-image: $st-site-logo-image,
+  $st-site-logo-image-svg: $st-site-logo-image-svg
+
+) {
   @if $st-site-logo-height != false {
     height: $st-site-logo-height;
   }
