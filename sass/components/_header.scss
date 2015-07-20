@@ -60,6 +60,7 @@ $st-header-inner-selector-width:    false !default;
   }
   @if $st-header-inner-selector != false {
     #{$st-header-inner-selector}{
+    
       @if $st-header-inner-selector-width != false {
         width: $st-header-inner-selector-width;
       }
